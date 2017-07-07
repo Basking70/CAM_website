@@ -1,0 +1,7 @@
+seminars: 
+
+1.AME seminars
+Link: https://ame.usc.edu/about/seminars/
+
+2.CS Events
+Link: https://www.cs.usc.edu/events
