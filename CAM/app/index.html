@@ -1,25 +1,42 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+	<!-- Google Icons -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body ng-app="camApp">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
+	  
+	<!-- adding viterbi iage buttom on the top-->
+	  <div class="container">
+		  	<div class="row">	
+				<div class="col-sm-6">
+					<a href="https://viterbischool.usc.edu/" style="align: justify;">
+						<img src="images/pic1.png" width="270" height="100">
+					</a>
+				</div>
+		  	</div>
+	  </div>
+	  
     <!-- Add your site or application content here -->
     <div class="header">
       <div class="navbar navbar-default" role="navigation">
@@ -33,31 +50,95 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">cam</a>
+            <!--<a class="navbar-brand" href="#/">cam</a> -->
           </div>
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
+          <div class="collapse navbar-collapse" id="js-navbar-collapse" >
+            <ul class="nav navbar-nav" style="margin-left: 15px;">
+			  <li><a ng-href="#!/">Home</a></li>
+              <li><a ng-href="#!/research">Research</a></li>
+			  <li><a ng-href="#!/seminars">Seminars</a></li>
+			  <li><a ng-href="#!/equipment">Equipment</a></li>
+			  <li><a ng-href="#!/publications">Publications</a></li>
+			  <li><a ng-href="#!/aboutus">About Us</a></li>
+			  <li><a ng-href="#!/people">People</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-
+	  
+  <!--direct view of each page  -->
     <div class="container">
-    <div ng-view=""></div>
+    	<div ng-view=""></div>
     </div>
 
     <div class="footer">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
-
+		  <div class="row">
+			  <div class="row">
+    			<div class="col-sm-4">
+					<!-- CAM information-->
+					<h6>Center For Advance Manufacting</h6>
+					<!-- address of CAM-->
+					<i class="material-icons" style="font-size:12px">map</i> 
+					<p style="display: inline; font-size:11px">
+					   Address: University of Southern California<br>
+					   Ronald Tutor Hall, RTH426<br>
+					   3710 McClintock Ave<br>
+				Los Angeles, CA 90089-9121</p>
+				</div>
+				<div class="col-sm-4">
+				   
+				</div>
+				<div class="col-sm-4">
+					<br>
+					<a href="https://www.youtube.com/channel/UCO82Tsg5Xc5vP_ZWkax4Wpg/featured">
+  						<img src="images/youtube_logo.png" alt="Youtube_link" style="width:42px;height:42px;border:0;">
+					</a> 
+					<a href="https://www.facebook.com/USCViterbi">
+  						<img src="images/facebook_logo.png" alt="Facebook_link" style="width:42px;height:42px;border:0;">
+					</a>
+					<a href="https://twitter.com/uscviterbi?lang=end">
+  						<img src="images/twitter_logo.png" alt="twitter_link" style="width:42px;height:42px;border:0;">
+					</a>  
+					<p style="color: white; visibility: hidden;">TemplateTemplateTemplateTemplateTemplateTemplate
+						TemplateTemplateTemplateTemplateTemplateTemplate
+						TemplateTemplateTemplateTemplateTemplateTemplate</p>
+				</div>
+				<div class="col-sm-3" style="font-size:11px;">
+					<!-- proffesor gupta information-->
+					<p>Director S.K. Gupta</p>
+					<i class="material-icons" style="font-size:11px">phone</i> 
+					<p style="display: inline">
+					   Phone: 213-740-0491</p><br>
+					<i class="material-icons" style="font-size:11px">mail</i> 
+					<p style="display: inline">
+					   Email: guptask@usc.edu</p><br>
+				</div>
+				<div class="col-sm-3" style="font-size:11px;">
+					<!-- Alec Kanyuck information-->
+					<p>Manager: Alec Kanyuck</p>
+					<i class="material-icons" style="font-size:11px">phone</i> 
+					<p style="display: inline">
+					   Phone: 213-765-8051</p><br>
+					<i class="material-icons" style="font-size:11px">mail</i> 
+					<p style="display: inline">
+					   Email: kanyuck@usc.edu</p>
+				</div>
+				<div class="col-sm-4">
+   					<p style="color: white; visibility: hidden;">TemplateTemplateTemplateTemplateTemplateTemplate
+						TemplateTemplateTemplateTemplateTemplateTemplate
+						TemplateTemplateTemplateTemplateTemplateTemplate</p>
+				</div>
+				<div class="col-sm-12">
+					<center><p>© Basir Navab - 2017<br>
+	    			    navab@usc.edu</p></center>
+				</div>
+				  
+				
+			  </div>
+<!--------------------------------------------------->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -88,6 +169,12 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/seminars.js"></script>
+        <script src="scripts/controllers/research.js"></script>
+        <script src="scripts/controllers/publications.js"></script>
+        <script src="scripts/controllers/people.js"></script>
+        <script src="scripts/controllers/equipment.js"></script>
+        <script src="scripts/controllers/aboutus.js"></script>
         <!-- endbuild -->
 </body>
 </html>
