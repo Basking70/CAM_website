@@ -14,4 +14,14 @@ angular.module('camApp')
       'AngularJS',
       'Karma'
     ];
+	
+	
+	$(document).ready(function(){
+    
+	$("#myBtn1").click(function(){
+        $("#myModal1").modal({backdrop: "static"});
+    });
+    });
+
+	
   });
