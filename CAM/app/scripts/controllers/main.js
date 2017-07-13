@@ -14,4 +14,14 @@ angular.module('camApp')
       'AngularJS',
       'Karma'
     ];
+	
+	
+	$(document).ready(function () {
+    $('.carousel').carousel({
+        interval: 2500
+    });
+
+    $('.carousel').carousel('cycle');
+});
+	
   });
