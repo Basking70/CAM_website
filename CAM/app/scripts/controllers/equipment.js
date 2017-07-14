@@ -48,4 +48,13 @@ angular.module('camApp')
 			$("#myModal10").modal({backdrop: "static"});
 		});
 	});
+	
+	$(document).ready(function(){
+    	$("#flip1").click(function(){
+        $("#panel1").slideToggle("slow");
+    	});
+		$("#flip2").click(function(){
+        $("#panel2").slideToggle("slow");
+    	});
+	});
   });
