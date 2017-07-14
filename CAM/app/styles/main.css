@@ -81,3 +81,30 @@ body {
     border-bottom: 0;
   }
 }
+
+.panel, .flip {
+    padding: 5px;
+    text-align: left;
+    background-color: gainsboro;
+    border: solid 1px #c3c3c3;
+	border-radius: 5px;
+}
+
+.panel {
+    padding: auto;
+    display: none;
+}
+
+.panel1, .flip1 {
+    padding: 5px;
+    text-align: left;
+    background-color: lightgray;
+    border: solid 1px gray;
+	border-radius: 5px;
+}
+
+.panel1 {
+    padding: auto;
+    display: none;
+}
+
