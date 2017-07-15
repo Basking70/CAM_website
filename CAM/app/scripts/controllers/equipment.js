@@ -47,6 +47,30 @@ angular.module('camApp')
 		$("#myBtn10").click(function(){
 			$("#myModal10").modal({backdrop: "static"});
 		});
+		$("#myBtn11").click(function(){
+			$("#myModal11").modal({backdrop: "static"});
+		});
+		$("#myBtn12").click(function(){
+			$("#myModal12").modal({backdrop: "static"});
+		});
+		$("#myBtn13").click(function(){
+			$("#myModal13").modal({backdrop: "static"});
+		});
+		$("#myBtn14").click(function(){
+			$("#myModal14").modal({backdrop: "static"});
+		});
+		$("#myBtn15").click(function(){
+			$("#myModal15").modal({backdrop: "static"});
+		});
+		$("#myBtn16").click(function(){
+			$("#myModal16").modal({backdrop: "static"});
+		});
+		$("#myBtn17").click(function(){
+			$("#myModal17").modal({backdrop: "static"});
+		});
+		$("#myBtn18").click(function(){
+			$("#myModal18").modal({backdrop: "static"});
+		});
 	});
 	
 	$(document).ready(function(){
