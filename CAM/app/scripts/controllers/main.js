@@ -18,7 +18,7 @@ angular.module('camApp')
 	
 	$(document).ready(function () {
     $('.carousel').carousel({
-        interval: 2500
+        interval: 3000
     });
 
     $('.carousel').carousel('cycle');
