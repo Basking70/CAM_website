@@ -71,8 +71,20 @@ angular.module('camApp')
 		$("#myBtn18").click(function(){
 			$("#myModal18").modal({backdrop: "static"});
 		});
+		$("#myBtn19").click(function(){
+			$("#myModal19").modal({backdrop: "static"});
+		});
+		$("#myBtn20").click(function(){
+			$("#myModal20").modal({backdrop: "static"});
+		});
+		$("#myBtn21").click(function(){
+			$("#myModal21").modal({backdrop: "static"});
+		});
+		$("#myBtn22").click(function(){
+			$("#myModal22").modal({backdrop: "static"});
+		});
 	});
-	
+///////////	
 	$(document).ready(function(){
     	$("#flip1").click(function(){
         $("#panel1").slideToggle("slow");
@@ -81,4 +93,10 @@ angular.module('camApp')
         $("#panel2").slideToggle("slow");
     	});
 	});
-  });
+//////////
+	
+	
+////////
+	
+	
+ });
