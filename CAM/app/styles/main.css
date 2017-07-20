@@ -118,3 +118,12 @@ body {
   /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
   opacity: .5;
 }
+/* gallery page */ 
+
+#pics_gallery {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#pics_gallery:hover {opacity: 0.7;}
