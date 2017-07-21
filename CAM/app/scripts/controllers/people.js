@@ -97,8 +97,74 @@ angular.module('camApp')
 		$("#myBtn20").click(function(){
 			$("#myModal20").modal({backdrop: "static"});
 		});
-
-
+  	/// btn21
+		$("#myBtn21").click(function(){
+			$("#myModal21").modal({backdrop: "static"});
+		});
+  	/// btn22
+		$("#myBtn22").click(function(){
+			$("#myModal22").modal({backdrop: "static"});
+		});
+  	/// btn23
+		$("#myBtn23").click(function(){
+			$("#myModal23").modal({backdrop: "static"});
+		});
+  	/// btn24
+		$("#myBtn24").click(function(){
+			$("#myModal24").modal({backdrop: "static"});
+		});
+  	/// btn25
+		$("#myBtn25").click(function(){
+			$("#myModal25").modal({backdrop: "static"});
+		});
+  	/// btn26
+		$("#myBtn26").click(function(){
+			$("#myModal26").modal({backdrop: "static"});
+		});
+  	/// btn27
+		$("#myBtn27").click(function(){
+			$("#myModal27").modal({backdrop: "static"});
+		});
+  	/// btn28
+		$("#myBtn28").click(function(){
+			$("#myModal28").modal({backdrop: "static"});
+		});
+  	/// btn29
+		$("#myBtn29").click(function(){
+			$("#myModal29").modal({backdrop: "static"});
+		});
+  	/// btn30
+		$("#myBtn31").click(function(){
+			$("#myModal31").modal({backdrop: "static"});
+		});
+  	/// btn32
+		$("#myBtn31").click(function(){
+			$("#myModal32").modal({backdrop: "static"});
+		});
+  	/// btn33
+		$("#myBtn33").click(function(){
+			$("#myModal33").modal({backdrop: "static"});
+		});
+  	/// btn34
+		$("#myBtn34").click(function(){
+			$("#myModal34").modal({backdrop: "static"});
+		});
+  	/// btn35
+		$("#myBtn35").click(function(){
+			$("#myModal35").modal({backdrop: "static"});
+		});
+  	/// btn36
+		$("#myBtn36").click(function(){
+			$("#myModal36").modal({backdrop: "static"});
+		});
+  	/// btn37
+		$("#myBtn37").click(function(){
+			$("#myModal37").modal({backdrop: "static"});
+		});
+  	/// btn38
+		$("#myBtn38").click(function(){
+			$("#myModal38").modal({backdrop: "static"});
+		});
 		
 		
 		
