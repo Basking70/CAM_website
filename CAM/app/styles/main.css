@@ -127,3 +127,11 @@ body {
 }
 
 #pics_gallery:hover {opacity: 0.7;}
+
+#General_hover {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#General_hover:hover {opacity: 0.7;}
