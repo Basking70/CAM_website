@@ -49,10 +49,8 @@ angular.module('camApp')
 		}).on('hidden.bs.collapse', function(){
 		$(this).parent().find(".glyphicon-minus").removeClass("glyphicon-minus").addClass("glyphicon-plus");
 		});
-		
-		
-		
-		
-		
 	});
+	
+	
+	
   });
