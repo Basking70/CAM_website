@@ -15,4 +15,6 @@ angular.module('camApp')
       'AngularJS',
       'Karma'
     ];
-  });
+	
+	baguetteBox.run('.tz-gallery');
+});
