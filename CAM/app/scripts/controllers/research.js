@@ -166,7 +166,34 @@ $(document).ready(function(){
     $("#btm14").html('<span class="glyphicon glyphicon-collapse-up"></span> Read Less');
   });
 });
+
 	
+$(document).ready(function(){
+  $("#demo15").on("hide.bs.collapse", function(){
+    $("#btm15").html('<span class="glyphicon glyphicon-collapse-down"></span> Read More');
+  });
+  $("#demo15").on("show.bs.collapse", function(){
+    $("#btm15").html('<span class="glyphicon glyphicon-collapse-up"></span> Read Less');
+  });
+});
+
+$(document).ready(function(){
+  $("#demo16").on("hide.bs.collapse", function(){
+    $("#btm16").html('<span class="glyphicon glyphicon-collapse-down"></span> Read More');
+  });
+  $("#demo16").on("show.bs.collapse", function(){
+    $("#btm16").html('<span class="glyphicon glyphicon-collapse-up"></span> Read Less');
+  });
+});
+	
+$(document).ready(function(){
+  $("#demo16").on("hide.bs.collapse", function(){
+    $("#btm16").html('<span class="glyphicon glyphicon-collapse-down"></span> Read More');
+  });
+  $("#demo16").on("show.bs.collapse", function(){
+    $("#btm16").html('<span class="glyphicon glyphicon-collapse-up"></span> Read Less');
+  });
+});
 
 	
   });
