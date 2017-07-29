@@ -14,42 +14,21 @@ angular.module('camApp')
       'AngularJS',
       'Karma'
     ];
-	/// the first 	
-	$(document).ready(function(){
-    $("#flip1").click(function(){
-        $("#panel1").slideToggle("slow");
-    	});
-	//// the secound
-	    $("#flip2").click(function(){
-        $("#panel2").slideToggle("slow");
-    	});
-	//// the third
-		$("#flip3").click(function(){
-        $("#panel3").slideToggle("slow");
-    	});
-	//// the forth
-		$("#flip4").click(function(){
-        $("#panel4").slideToggle("slow");
-    	});
-	//// the fifth
-		$("#flip5").click(function(){
-        $("#panel5").slideToggle("slow");
-    	});
-	//// the sith
-		$("#flip6").click(function(){
-        $("#panel6").slideToggle("slow");
-    	});
-	//// the seveth
-		$("#flip7").click(function(){
-        $("#panel7").slideToggle("slow");
-    	});
-
-		$('.collapse').on('shown.bs.collapse', function(){
-		$(this).parent().find(".glyphicon-plus").removeClass("glyphicon-plus").addClass("glyphicon-minus");
-		}).on('hidden.bs.collapse', function(){
-		$(this).parent().find(".glyphicon-minus").removeClass("glyphicon-minus").addClass("glyphicon-plus");
-		});
-	});
+	
+	
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
 	
 	
 	
