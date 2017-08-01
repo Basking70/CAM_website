@@ -118,6 +118,8 @@ body {
   /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
   opacity: .5;
 }
+
+/*---------------------------*/
 /* Genteral Hover */ 
 
 #General_hover {
@@ -497,7 +499,7 @@ div.tab {
     background-color: lightgrey;
 	border-radius: 15px;
 	width: 296.5px;
-	margin: auto;
+	margin: 5px 0px 5px 0px;
 	
 }
 
@@ -519,10 +521,6 @@ div.tab button:hover {
     background-color: darkgray;
 }
 
-/* Create an active/current tablink class */
-div.tab button.active {
-    background-color: darkgray;
-}
 
 /* Style the tab content */
 .tabcontent {
@@ -541,4 +539,28 @@ div.tab button.active {
 @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+
+/*---------------------------*/
+/*  Scroll top index page */ 
+
+.scrollToTop{
+
+	display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #991b1e; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+	
+}
+.scrollToTop:hover{
+	background-color: #a05555; /* Add a dark-grey background on hover */
 }

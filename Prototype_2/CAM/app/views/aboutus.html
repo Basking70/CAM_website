@@ -15,9 +15,9 @@
 		</p><br>	
 		
 			<div class="tab">
-			  <button class="tablinks" onclick="openCity(event, 'Vision')">Vision</button>
-			  <button class="tablinks" onclick="openCity(event, 'Mission')">Mission</button>
-			  <button class="tablinks" onclick="openCity(event, 'Focus_Areas')">Focus Areas</button>
+			  <button class="tablinks" onclick="OpenNote(event, 'Vision')">Vision</button>
+			  <button class="tablinks" onclick="OpenNote(event, 'Mission')">Mission</button>
+			  <button class="tablinks" onclick="OpenNote(event, 'Focus_Areas')">Focus Areas</button>
 			</div>
 		
 		<!-- Vision part -->
@@ -126,7 +126,7 @@
 
 
 <script>
-function openCity(evt, cityName) {
+function OpenNote(evt, title) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -136,7 +136,7 @@ function openCity(evt, cityName) {
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(title).style.display = "block";
     evt.currentTarget.className += " active";
 }
 </script>
