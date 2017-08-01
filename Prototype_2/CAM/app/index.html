@@ -12,7 +12,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main_v1.0.css"> <!-- This is the URL for release 1.0 -->
     <!-- endbuild -->
 	<!-- Google Icons -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -26,7 +26,10 @@
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-	  
+	
+	<!-- Scroll Back buttom -->
+		  <a href="#" class="scrollToTop"> Top </a>
+	<!-- End of Scroll Back buttom -->
 	<!-- adding viterbi iage buttom on the top-->
 	  <div class="container">
 		  	<div class="row">	
@@ -60,7 +63,7 @@
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse" >
-            <ul class="nav navbar-nav" style="float: center; font-size:13px;">
+            <ul class="nav navbar-nav" style="float: center; font-size:13px; margin-left: 16px;">
 			  <li><a ng-href="#!/">Home</a></li>
               <li><a ng-href="#!/research">Research</a></li>
 			  <li><a ng-href="#!/seminars">Seminars</a></li>
@@ -190,3 +193,24 @@
         <!-- endbuild -->
 </body>
 </html>
+
+<script>
+	$(document).ready(function(){
+
+		//Check to see if the window is top if not then display button
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 100) {
+				$('.scrollToTop').fadeIn();
+			} else {
+				$('.scrollToTop').fadeOut();
+			}
+		});
+
+		//Click event to scroll to top
+		$('.scrollToTop').click(function(){
+			$('html, body').animate({scrollTop : 0},800);
+			return false;
+		});
+
+	});
+</script>
