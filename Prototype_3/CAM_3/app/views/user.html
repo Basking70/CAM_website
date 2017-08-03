@@ -1,0 +1,36 @@
+
+<div class="container">
+	<div class="tab2">
+	  <button class="tablinks" onclick="openPage(event, 'Profile')">Profile</button>
+	  <button class="tablinks" onclick="openPage(event, 'Research')">Research</button>
+	</div>
+
+	<div id="Profile" class="tabcontent">
+	  <h3>Profile</h3>
+	  <p>this page consist of personal information</p> 
+	</div>
+
+	<div id="Research" class="tabcontent">
+	  <h3>Research</h3>
+	  <p>this page consist of Research</p>
+	</div>
+	 
+</div>
+<script>
+function openPage(evt, page) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(page).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
