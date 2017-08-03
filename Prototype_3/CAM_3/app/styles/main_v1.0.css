@@ -1,0 +1,618 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.panel, .flip {
+    padding: 5px;
+    text-align: left;
+    background-color: gainsboro;
+    border: solid 1px #c3c3c3;
+	border-radius: 5px;
+}
+
+.panel {
+    padding: auto;
+    display: none;
+}
+
+.panel1, .flip1 {
+    padding: 5px;
+    text-align: left;
+    background-color: lightgray;
+    border: solid 1px gray;
+	border-radius: 5px;
+}
+
+.panel1 {
+    padding: auto;
+    display: none;
+}
+
+
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+
+/*---------------------------*/
+/* Genteral Hover */ 
+
+#General_hover {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#General_hover:hover {opacity: 0.7;}
+
+/*---------------------------*/
+/* Galley  page*/
+.container.gallery-container {
+    background-color: #fff;
+    color: #35373a;
+    min-height: 100vh;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-container h1 {
+    text-align: center;
+    margin-top: 70px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+}
+
+.gallery-container p.page-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 25px auto;
+    color: #888;
+    font-size: 18px;
+}
+
+.tz-gallery {
+    padding: 40px;
+}
+
+.tz-gallery .lightbox img {
+    width: 100%;
+    margin-bottom: 30px;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+
+.tz-gallery .lightbox img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+	opacity: 0.7;
+}
+
+.tz-gallery img {
+    border-radius: 4px;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+
+@media(max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .container.gallery-container {
+        border-radius: 0;
+    }
+}
+
+
+/*  the precvious code for gallery */
+/*
+<div class="container">
+	<div class="well">
+		<div class="row">
+			<!-- picture 1 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic1.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic1.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 2 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic2.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic2.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 3 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic3.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic3.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 4 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic4.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic4.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 5 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic5.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic5.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 6 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic6.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic6.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 7 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic7.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic7.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 8 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic8.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic8.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 9 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic9.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic9.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 10 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic10.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic10.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 11 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic11.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic11.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 12 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic12.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic12.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 13 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic13.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic13.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 14 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic14.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic14.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 15 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic15.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic15.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 16 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic16.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic16.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 17 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic17.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic17.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 18 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic18.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic18.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 19 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic19.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic19.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 20 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic20.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic20.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 21 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic21.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic21.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 22 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic22.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic22.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 24 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic24.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic24.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 25 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic25.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic25.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 26 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic26.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic26.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 27 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic27.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic27.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 28 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic28.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic28.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 29 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic29.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic29.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 30 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic30.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic30.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 31 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic31.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic31.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 34 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic34.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic34.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 35 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic35.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic35.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 36 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic36.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic36.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 37 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic37.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic37.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 38 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic38.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic38.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 39 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic39.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic39.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 40 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic40.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic40.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 41 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic41.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic41.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 42 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic42.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic42.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 44 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic44.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic44.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 45 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic45.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic45.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 46 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic46.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic46.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 47 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic47.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic47.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 48 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic48.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic48.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 49 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic49.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic49.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 50 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic50.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic50.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+			<!-- picture 51 -->
+			<div class="col-sm-4">
+				<a target="_blank" href="images/gallery/pic51.JPG">
+					<img id= "pics_gallery" src="images/gallery/pic51.JPG" alt="gallery pictures" style=" width:100%; !important; margin: 7px 0px 7px 0px;">
+				</a>
+			</div>
+		</div>	
+	</div>		
+</div>	
+		
+
+
+*/
+
+
+/*---------------------------*/
+/*  About us page */ 
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: lightgrey;
+	border-radius: 15px;
+	width: 296.5px;
+	margin: 5px 0px 5px 0px;
+	
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+	
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: darkgray;
+}
+
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+/*---------------------------*/
+/*  Scroll top index page */ 
+
+.scrollToTop{
+
+	display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #991b1e; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+	
+}
+.scrollToTop:hover{
+	background-color: #a05555; /* Add a dark-grey background on hover */
+}
+
+
+/*---------------------------*/
+/*  Scroll top admin page */ 
+
+
+/* Style the tab */
+div.tab2 {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: auto;
+	border-radius: 15px;
+	height: auto;
+}
+
+/* Style the buttons inside the tab */
+div.tab2 button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 10px 13px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+	border-radius: 15px;
+}
+
+/* Change background color of buttons on hover */
+div.tab2 button:hover {
+    background-color: #ddd;
+	
+}
+
+/* Create an active/current "tab button" class */
+div.tab2 button.active {
+    background-color: #ccc;
+	
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 20px;
+    width: auto;
+    height: auto;
+	border-radius: 15px;
+}

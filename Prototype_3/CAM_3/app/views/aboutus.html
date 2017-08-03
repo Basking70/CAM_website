@@ -1,0 +1,142 @@
+
+<div class="container">
+	<div class="well" style="overflow: auto;">
+		<center>
+			<h3>USC- Center for Advanced Manufacturing</h3>
+		</center>
+		<p>
+			The University of Southern California has established a new center focused on Advanced Manufacturing. The center will support a comprehensive program in advanced manufacturing. The goals of the center are to:
+		</p>
+		<p>
+			- Grow manufacturing research at USC by launching new initiatives;<br>
+			- Enrich educational experience of students and help in attracting high quality students to USC;<br>
+			- Provide access to the latest manufacturing technology to the USC community;<br>
+			- Support manufacturing industry in the Southern California region.
+		</p><br>	
+		
+			<div class="tab">
+			  <button class="tablinks" onclick="OpenNote(event, 'Vision')">Vision</button>
+			  <button class="tablinks" onclick="OpenNote(event, 'Mission')">Mission</button>
+			  <button class="tablinks" onclick="OpenNote(event, 'Focus_Areas')">Focus Areas</button>
+			</div>
+		
+		<!-- Vision part -->
+		<div id="Vision" class="tabcontent">
+		  <h3>Vision</h3>
+			<p>Improve lives through advances in manufacturing by:</p>
+				<ul style="list-style-type: square;">
+					<li>Broadening the pool of inventors</li>
+					<li>Enabling innovation to grow manufacturing industry</li>
+					<li>Realizing flexible manufacturing at affordable costs</li>
+					<li>Creating jobs by enabling in-shoring</li>
+					<li>Reducing environmental impacts of manufacturing</li>
+				</ul>
+		</div>
+		<!-- Mission part -->
+		<div id="Mission" class="tabcontent">
+		  <h3>Mission</h3>
+			<p>The center will support the Viterbi School and its partners by:</p>
+				<ul style="list-style-type: square;">
+					<li>Conducting basic and applied research to enable advances in manufacturing</li>
+					<li>Identifying new opportunities in manufacturing areas and launching new initiatives to address them</li>
+					<li>Developing interdisciplinary manufacturing education programs</li>
+					<li>Supporting outreach to the K-12 community</li>
+					<li>Providing access to advanced manufacturing capabilities to the USC community</li>
+					<li>Providing manufacturing expertise to companies in the Southern California region</li>
+					<li>Transitioning research results into industrial practice</li>
+				</ul> 
+		</div>
+		<!-- Focus Areas part -->
+		<div id="Focus_Areas" class="tabcontent">
+		  <h3>Focus Areas</h3>
+		  <ul>
+			<!--Indead 1-->
+				<li>
+				<h4>Focus Area 1: Digital Manufacturing</h4>
+					<p>
+						This area leverages the latest advances in the information technology and computing areas to realize tools and methods to reduce reliance on physical prototyping, to enable distributed collaboration in global environment, and to manage information. Representative areas include:
+					</p>
+					<ul style="list-style-type: square;">
+						<li>Virtual prototyping of complex products</li>
+						<li>High fidelity simulations of manufacturing operations</li>
+						<li>Manufacturing system design and optimization</li>
+						<li>Automated planning, instruction generation, and cost estimation</li>
+						<li>Product life cycle management (PLM)</li>
+					</ul>
+				</li>
+
+			<!--Indead 2-->
+			<br>
+				<li>
+					<h4>Focus Area 2: Additive Manufacturing.</h4>
+						<p>
+							This area focuses on making advances in the additive manufacturing processes to enable the realization of innovative products. Representative topics include:
+						</p>
+					<ul style="list-style-type: square;">
+						<li>Multi-material processes</li>
+						<li>Multi-scale processes</li>
+						<li>Processes for creating multi-functional structures</li>
+						<li>Automated post-processing</li>
+						<li>Metrology</li>
+						<li>Process modeling and control</li>
+					</ul>
+				</li>
+
+			<!--Indead 3-->
+			<br>
+				<li>
+					<h4> Focus Area 3: Robotics and Automation.</h4>
+						<p>
+							This area focuses on the development of technologies to reduce human labor and manufacturing and hence make manufacturing cost-competitive in the US.
+							Representative topics include:
+						</p>
+						<ul style="list-style-type: square;">
+							<li>Mobile manipulation</li>
+							<li>Low cost custom robots</li>
+							<li>Assemblies with highly compliant parts</li>
+							<li>Automation for meso, micro and nanoscale assemblies</li>
+							<li>Learning from demonstrations</li>
+							<li>Human robot collaboration</li>
+						</ul>
+				</li>
+			<br>
+			<!--Indead 4-->
+				<li>
+					<h4>Focus Area 4: Smart Manufacturing</h4>
+						<p>
+							This area focuses on improving resource utilization, reducing errors, and increasing responsiveness to changes. Representative topics include:
+						</p>
+						<ul style="list-style-type: square;">
+							<li>Exploit Internet-of-Things</li>
+							<li>Efficient resource utilization</li>
+							<li>Energy efficient manufacturing</li>
+							<li>Energy efficient automation</li>
+							<li>Multi-modal sensing for process monitoring</li>
+							<li>Big data for prediction and optimization</li>
+							<li>Contingency planning to recover from errorsfill-reg</li>
+						</ul>
+				</li>						
+			</ul>
+		</div>
+		
+	</div>
+	
+</div>
+
+
+
+<script>
+function OpenNote(evt, title) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(title).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
