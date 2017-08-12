@@ -15,65 +15,23 @@ angular.module('camApp')
       'Karma'
     ];
 	
-$scope.formSubmit = function() {
-	$scope.test = true;
-	if ($scope.username == "admin" && $scope.password == "pass")
-		{
-			$scope.error = " ";
-			$scope.ErrAlert = false;
-			$location.path('/admin');
-		}
-		else
-		{
-			$scope.test = false;
-			$scope.error = "Incorrect username/password !";
-			$scope.ErrAlert = true;
-			
-			$timeout(function () {
-				$scope.ErrAlert = false;
-			}, 1000);
-		};
-};
-	
-	
-	
-	
-	
+	//run the submit bottum
+	$scope.formSubmit = function() {
+		//check fo the username & password
+		if ($scope.username == "admin" && $scope.password == "pass")
+			{
+				$scope.ErrAlert = false; // dosent show the alet message
+				$location.path('/admin'); //redirect to the admin page
+			}
+			else
+			{
+				$scope.error = "Incorrect username/password !"; // error message
+				$scope.ErrAlert = true; // show the alert message
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*
-	
-    $scope.formSubmit = function() {
-		// timeout for loading icon
-		$scope.test = true;
-		$timeout(function () {			
-				if ($scope.username == "admin" && $scope.password == "pass")
-					{
-						$scope.error = " ";
-						$scope.ErrAlert = false;
-						$location.path('/admin');
-					}
-				else
-					{
-						$scope.error = "Incorrect username/password !";
-						$scope.ErrAlert = true;
-					}	
-	    		$scope.myHeader = "How are you today?";
-				$scope.test = false;
-  			}, 1000);	
-		};
-  
-*/
-
-
-
-
+				// close the alert message after 2 sec
+				$timeout(function () {
+					$scope.ErrAlert = false;
+				}, 2000);
+			};
+	};
 });
