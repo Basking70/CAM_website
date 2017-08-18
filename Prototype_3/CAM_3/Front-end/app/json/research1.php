@@ -2,7 +2,7 @@
   "records": [
     {
       "Id": 1,
-	  "PicUrl": "Team_Advanced_Robotics_Finishing - ariyan kabir.jpg",
+	  "PicUrl": "Team_Advanced_Robotics_Finishing-ariyankabir.jpg",
       "Name": "Robotic Surface Finishing",
 	  "People": "Ariyan Kabir (PhD Student), Brual Shah (Post Doc)",
 	  "Email": "akabir@usc.edu",
