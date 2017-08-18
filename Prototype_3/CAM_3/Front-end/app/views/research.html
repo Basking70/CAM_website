@@ -1,0 +1,35 @@
+
+<div class="container">
+	<div class="well" ng-repeat="Research in ResearchData | orderBy : 'Id'">
+			<center>
+			<a target="_blank" href="images/research/{{ Research.PicUrl }}">
+				<img src="images/research/{{ Research.PicUrl }}" alt="reaserch {{ $index + 1 }}" style="width:45%;; float: right; margin: 0 0 10px 10px;">
+			</a>
+			</center>
+				<h4>{{Research.Id}} - {{Research.Name}}</h4>
+				<h5> People who are currently working on it : </h5>
+				<p style="font-size:13px ">
+					{{Research.People}}
+				</p>
+				<h5> Email of contact person : </h5>
+				<p style="font-size:13px ">
+					{{Research.Email}}
+				</p><br>
+
+				<div class="container">
+					<button type="button" class="btn btn-info" id="btm{{ $index + 1 }}" data-toggle="collapse" data-target="#demo{{ $index + 1 }}" style="margin-left:-15px;  background-color: #991b1e; border-color: #991b1e">
+					  <span class="glyphicon glyphicon-collapse-down"></span> Read More
+					</button>
+				  <div id="demo{{$index + 1}}" class="collapse" style=" max-width: 600px; text-align: justify; ">
+					<br>
+					  {{Research.Content}}
+					<!-- <a href="references/2016_shah_icaps.pdf" target="PDF_research1">PDF</a> -->
+				  </div>
+			</div>
+	</div>
+</div>
+
+
+
+
+
