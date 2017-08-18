@@ -38,14 +38,22 @@ angular.module('camApp')
 		$scope.OpenAddResearchForm = function(Id)
 		{
 			$("#myModal1").modal({backdrop: "static"});
-			// make the inputs clear
-			Research.Id=" ";
-			Research.Name=" ";
-			Research.people=" ";
-			Research.Email=" ";
-			Research.Content=" ";
-			Research.PicUrl=" ";	
+
 		};
+	//-------------------------
+	// Clear the input in add a new reaserch
+		$scope.ClearAddResearch = function()
+		{
+			console.log("cleared!");
+			$scope.Research.Id="";
+			$scope.Research.Name="";
+			$scope.Research.People="";
+			$scope.Research.Email="";
+			$scope.Research.Content="";
+			$scope.Research.PicUrl="";
+		
+		};
+	
 	//-------------------------
 	// add a new research to the db
 		$scope.AddNewResearch = function(){
@@ -148,6 +156,11 @@ angular.module('camApp')
 /////////////////////////////////////////////////////////////////////////////////////////		
 		
 
+	
+	
+	
+	
+	
 	//uploading picture
 		$scope.dataform={};
 		$scope.submitCuisine=function(isvalid){
