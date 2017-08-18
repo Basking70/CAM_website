@@ -110,12 +110,7 @@
 									  <label for="comment">People who are currently working on it:</label>
 									  <textarea class="form-control" rows="2" ng-model="Research.People" ></textarea>
 									</div>   
-								    
-									<!-- Email -->
-									<div class="form-group">
-									  <label for="comment">Email of contact person:</label>
-									  <textarea class="form-control" rows="2" ng-model="Research.Email" ></textarea>
-									</div>    
+								      
 								
 									<!-- Content -->
 									<div class="form-group">
@@ -148,7 +143,6 @@
 				<th>Id</th>
 				<th>Name</th>
 				<th>People</th>
-				<th>Email</th>
 				<th>content</th>
 				<th></th>
 				<th></th>
@@ -159,7 +153,6 @@
 				<td>{{ Research.Id }}   </td>
 				<td>{{ Research.Name }}</td>
 				<td>{{ Research.People }}</td>
-				<td>{{ Research.Email }}</td>
 				<td>{{ Research.Content.substring(0,40) }}...</td>
 				<td><button type="button"  ng-click="edit(Research._id)" class="btn btn-warning">Edit</button></td>
 		
@@ -192,13 +185,7 @@
 									<div class="form-group">
 									  <label for="comment">People who are currently working on it:</label>
 									  <textarea class="form-control" rows="2" ng-model="Research.People" ></textarea>
-									</div>   
-								    
-									<!-- Email -->
-									<div class="form-group">
-									  <label for="comment">Email of contact person:</label>
-									  <textarea class="form-control" rows="2" ng-model="Research.Email" ></textarea>
-									</div>    
+									</div>     
 								
 									<!-- Content -->
 									<div class="form-group">
