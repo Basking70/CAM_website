@@ -48,7 +48,6 @@ angular.module('camApp')
 			$scope.Research.Id="";
 			$scope.Research.Name="";
 			$scope.Research.People="";
-			$scope.Research.Email="";
 			$scope.Research.Content="";
 			$scope.Research.PicUrl="";
 		
