@@ -498,7 +498,7 @@ div.tab {
     border: 1px solid #ccc;
     background-color: lightgrey;
 	border-radius: 15px;
-	width: 296.5px;
+	text-align: center;
 	margin: 5px 0px 5px 0px;
 	
 }
@@ -506,7 +506,7 @@ div.tab {
 /* Style the buttons inside the tab */
 div.tab button {
     background-color: inherit;
-    float: left;
+    float: center;
     border: none;
     outline: none;
     cursor: pointer;
