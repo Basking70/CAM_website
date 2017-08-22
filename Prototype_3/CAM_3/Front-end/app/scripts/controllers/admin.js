@@ -58,6 +58,12 @@ angular.module('camApp')
 		$scope.AddNewResearch = function(){
 			console.log($scope.Research);
 			
+			/// uploading file to the folder
+               var file = $scope.myFile;
+               
+               console.log('file is ' );
+               console.log(file);
+               
 			$http({
 				method : "POST",
 				url : "http://localhost:5000/api/research",
@@ -81,27 +87,20 @@ angular.module('camApp')
 	//-------------------------	
 	//sending the *Remove* request to the server
 		// request to remove
+		var Selected_Research_For_Deleting;
 		$scope.RemoveReq = function(id){
-			$("#myModal2").modal({backdrop: "static"});
-		/*	
-			$http({
-				method : "DELETE",
-				url : 'http://localhost:5000/api/research/' + id
-			}).then(function mySuccess(response) {
-				refresh(); // refreshing the page after deleting successfully
-				SuccessMsg("The new research was deleted from the system!"); // showing the message 
-			}, function myError(response) {
-				$scope.myWelcome = "Something went wrong";
-			});			
-		*/
-	
-		// removing the research
-		$scope.Remove = function(id){
 			console.log(id);
+			Selected_Research_For_Deleting = id;
+			$("#myModal2").modal({backdrop: "static"});
+
+	};
+		// removing the research
+		$scope.Remove = function(){
+			console.log(Selected_Research_For_Deleting);
 		
 			$http({
 				method : "DELETE",
-				url : 'http://localhost:5000/api/research/' + id
+				url : 'http://localhost:5000/api/research/' + Selected_Research_For_Deleting
 			}).then(function mySuccess(response) {
 				refresh(); // refreshing the page after deleting successfully
 				SuccessMsg("The new research was deleted from the system!"); // showing the message 
@@ -110,7 +109,7 @@ angular.module('camApp')
 			});			
 		
 		};	
-		};
+		
 	
 	//-------------------------
 // End of the whole process of *Remove* a new Research	
