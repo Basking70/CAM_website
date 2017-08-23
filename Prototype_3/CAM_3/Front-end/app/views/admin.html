@@ -28,7 +28,13 @@
 	  <p>this page consist of news + pictires of them</p>
 	</div>
 	
-	<!-- Summery Research -->
+	<!--  
+	/////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////// START OF Summery Research///////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	-->
 	<div id="Research" class="tabcontent" >
 		<!-- Saving message 1s-->
 			<div class="alert alert-success alert-dismissable fade in" ng-show="SavingAlert">
@@ -221,11 +227,208 @@
   		</table>
 	</div>
 	
-	<!-- Summery Equipment -->
+	<!--------------------------------------------------------------------------------------->
+	<!--------------------------------------------------------------------------------------->
+	<!--  
+	/////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////// START OF Summery Equipment /////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	-->
 	<div id="Equipment" class="tabcontent">
-	  <h3>Equipment</h3>
-	  <p>page Equipment</p>
+		<!-- Saving message 1s-->
+			<div class="alert alert-success alert-dismissable fade in" ng-show="SavingAlert">
+    			<strong>{{ SavingTxt }}</strong> 
+  			</div>  
+		<!-- End of the saving message 1s -->
+		<!------------------------>
+	<h3>Equipments</h3>
+		<!-- start of open the form for adding a new Equipment -->
+		<button type="button1"  ng-click="OpenAddEquipmentForm()" class="btn btn-success">Add a Equipment</button><br><br>
+			<!-- Strat of edit section -->
+				<div class="modal fade" id="Equipment1" role="dialog">
+						<div class="modal-dialog">
+
+						  <!-- Modal content for person-->
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal">×</button>
+							  <h4 class="modal-title">New Equipment</h4>
+							</div>
+							<div class="modal-body">
+									
+									<!-- Id -->
+									<div class="form-group">
+									  <label for="comment">Id of the Equipment:</label>
+									  <input class="form-control" ng-model="Equipment.Id " type="number" min="1" >
+									</div>								
+								    
+									<!-- Group -->
+									<div class="form-group">
+									  <label for="comment">Group of the Equipment:</label>
+									  <textarea class="form-control" rows="2" ng-model="Equipment.Group" ></textarea>
+									</div> 
+								    
+									<!-- CompanyName -->
+									<div class="form-group">
+									  <label for="comment">The Name of Equipment company:</label>
+									  <textarea class="form-control" rows="2" ng-model="Equipment.CompanyName" ></textarea>
+									</div> 	
+								
+									<!-- Name -->
+									<div class="form-group">
+									  <label for="comment">The Name of Equipment:</label>
+									  <textarea class="form-control" rows="2" ng-model="Equipment.Name" ></textarea>
+									</div>   
+								      
+								
+									<!-- Content -->
+									<div class="form-group">
+									  <label for="comment">Content of the Equipment:</label>
+									  <textarea class="form-control" rows="5" ng-model="Equipment.Content" ></textarea>
+									</div>
+									
+									<!-- ReadMore -->
+									<div class="form-group">
+									  <label for="comment">Read More of the Equipment(Name of the PDF):</label>
+									  <textarea class="form-control" rows="1" ng-model="Equipment.ReadMore" ></textarea>
+									</div>												
+								
+									<!-- Adding a picture -->
+								
+									<div class="form-group">
+										<label for="comment">Adding a picture</label>
+										<textarea class="form-control" rows="1" ng-model="Equipment.PicUrl" ></textarea>
+									</div>
+									
+							</div>
+							<div class="modal-footer">
+							   	<button type="button"  ng-click="ClearAddEquipment()" class="btn btn-primary">Clear</button>
+								<button type="button"  ng-click="AddNewEquipment()" class="btn btn-success" data-dismiss="modal">Add Equipment</button>
+							   <button type="button"  class="btn btn-default" data-dismiss="modal">Cancel</button>
+							</div>
+						  </div>
+						</div>
+					</div>
+			<!-- End of Edit section -->
+		<!-- End of open the form for adding a new Equipment  -->
+	  	<table class="table table-striped">
+			<thead>
+			  <tr>
+				<th>Id</th>
+				<th>Group</th>
+				<th>Company Name</th>
+				<th>Name</th>
+				<th>Content</th>
+				<th></th>
+				<th></th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr ng-repeat="Equipment in EquipmentData | orderBy : 'Id'">
+				<td>{{ Equipment.Id }}   </td>
+				<td>{{ Equipment.Group }}</td>
+				<td>{{ Equipment.CompanyName }}</td>
+				<td>{{ Equipment.Name }}</td>
+				<td>{{ Equipment.Content.substring(0,40) }}...</td>
+				<td><button type="button"  ng-click="edit_Equipment(Equipment._id)" class="btn btn-warning">Edit</button></td>
+				  <!-- Strat of edit section -->
+					  <div class="modal fade" id="Equipment2" role="dialog">
+						<div class="modal-dialog">
+
+						  <!-- Modal content for person-->
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal">×</button>
+							  <h4 class="modal-title">Equipment {{ Equipment.Id }}</h4>
+							</div>
+							<div class="modal-body">
+									
+									<!-- Id -->
+									<div class="form-group">
+									  <label for="comment">Id of the Equipment:</label>
+									  <!-- <input type="number" class="form-control" ng-model="Research.Id" min="1" required> -->
+									  <input class="form-control" ng-model="Equipment.Id " type="number" min="1" >
+										<!-- <textarea class="form-control" rows="1" ng-model="Research.Id " ></textarea> -->
+									</div>								
+								    
+									<!-- Group -->
+									<div class="form-group">
+									  <label for="comment">Group of the Equipment:</label>
+									  <textarea class="form-control" rows="2" ng-model="Equipment.Group" ></textarea>
+									</div> 
+								    
+									<!-- CompanyName -->
+									<div class="form-group">
+									  <label for="comment">The Name of Equipment company:</label>
+									  <textarea class="form-control" rows="2" ng-model="Equipment.CompanyName" ></textarea>
+									</div> 	
+								
+									<!-- Name -->
+									<div class="form-group">
+									  <label for="comment">The Name of Equipment:</label>
+									  <textarea class="form-control" rows="2" ng-model="Equipment.Name" ></textarea>
+									</div>   
+								      
+								
+									<!-- Content -->
+									<div class="form-group">
+									  <label for="comment">Content of the Equipment:</label>
+									  <textarea class="form-control" rows="5" ng-model="Equipment.Content" ></textarea>
+									</div>
+									
+									<!-- ReadMore -->
+									<div class="form-group">
+									  <label for="comment">Read More of the Equipment(Name of the PDF):</label>
+									  <textarea class="form-control" rows="1" ng-model="Equipment.ReadMore" ></textarea>
+									</div>												
+								
+									<!-- Adding a picture -->
+								
+									<div class="form-group">
+										<label for="comment">Adding a picture</label>
+										<textarea class="form-control" rows="1" ng-model="Equipment.PicUrl" ></textarea>
+									</div>
+								
+							</div>
+							<div class="modal-footer">
+							   <button type="button"  ng-click="update_Equipment()" class="btn btn-success" data-dismiss="modal">Update</button>
+							   <button type="button"  class="btn btn-default" data-dismiss="modal">Cancel</button>
+							</div>
+						  </div>
+						</div>
+					</div>
+				  <!-- End of Edit section -->
+				<!----------------------------------->
+				<td><button type="button" class="btn btn-danger" ng-click="RemoveReq_Equipment(Equipment._id)">Remove</button></td>
+				  <!-- Strat of delete reseach  -->
+					  <div class="modal fade" id="Equipment3" role="dialog">
+						<div class="modal-dialog">
+
+						  <!-- Modal content for person-->
+						  <div class="modal-content">
+							<div class="modal-body">
+								<img src="images/SocialMedia_logo/warning.png" style="width:9%;">
+								<h4 style="display: inline;">   Are you sure you want to delete this research?</h4>
+								
+							</div>
+							<div class="modal-footer">
+							   <button type="button"  ng-click="Remove_Equipment()" class="btn btn-danger" data-dismiss="modal">Yes</button>
+							   <button type="button"  class="btn btn-default" data-dismiss="modal">No</button>
+							</div>
+						  </div>
+						</div>
+					</div>
+				  <!-- End of delete reseach -->
+				 <!----------------------------------->
+			  </tr>
+			</tbody>
+  		</table>
 	</div>
+	
+	<!--------------------------------------------------------------------------------------->
+	<!--------------------------------------------------------------------------------------->
 	
 	<!-- Summery Publication -->
 	<div id="Publication" class="tabcontent">
@@ -246,21 +449,24 @@
 	</div>
 	
 </div>
-<script>
-function openPage(evt, page) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(page).style.display = "block";
-    evt.currentTarget.className += " active";
-}
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+
+
+<script>
+	function openPage(evt, page) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(page).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
 </script>
