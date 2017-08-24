@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="tab2">
 	  <button class="tablinks" onclick="openPage(event, 'Summery')" id="defaultOpen">Home</button>
-	  <button class="tablinks" onclick="openPage(event, 'Profile')">Profile</button>
+	  <!--<button class="tablinks" onclick="openPage(event, 'Profile')">Profile</button>-->
 	  <button class="tablinks" onclick="openPage(event, 'News')">News</button>
 	  <button class="tablinks" onclick="openPage(event, 'Research')">Research</button>
 	  <button class="tablinks" onclick="openPage(event, 'Equipment')">Equipment</button>
@@ -21,13 +21,169 @@
 	  <h3>Profile</h3>
 	  <p>this page consist of personal information</p> 
 	</div>
-	
-	<!-- Summery News -->
-	<div id="News" class="tabcontent">
-	  <h3>News</h3>
-	  <p>this page consist of news + pictires of them</p>
+
+	<!--  
+	/////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////// START OF Summery News /////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	-->	
+		<div id="News" class="tabcontent">
+		<!-- Saving message 1s-->
+			<div class="alert alert-success alert-dismissable fade in" ng-show="SavingAlert">
+    			<strong>{{ SavingTxt }}</strong> 
+  			</div>  
+		<!-- End of the saving message 1s -->
+		<!------------------------>
+	<h3>News</h3>
+		<!-- start of open the form for adding a new pic -->
+		<button type="button1"  ng-click="OpenAddNewsForm()" class="btn btn-success">Add a News</button><br><br>
+			<!-- Strat of edit section -->
+				<div class="modal fade" id="News1" role="dialog">
+						<div class="modal-dialog">
+
+						  <!-- Modal content for pic-->
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal">×</button>
+							  <h4 class="modal-title">New News</h4>
+							</div>
+							<div class="modal-body">
+									
+									<!-- Id -->
+									<div class="form-group">
+									  <label for="comment">Id:</label>
+									  <input class="form-control" ng-model="News.Id " type="number" min="1" >
+									</div>								
+								    
+								    
+									<!-- Caption of the picture -->
+									<div class="form-group">
+									  <label for="comment">Caption:</label>
+									  <textarea class="form-control" rows="1" ng-model="News.Caption" ></textarea>
+									</div> 	
+								
+									
+									<!-- img -->
+									<div class="form-group">
+									  <label for="comment">Picture </label><br><br>
+											<img src="images/News/{{News.PicUrl}}" style="width:300px;">
+										<br>
+									</div>
+									
+									<!-- Adding a picture -->
+									<div class="form-group">
+										<label for="comment">Adding a picture</label>
+										<textarea class="form-control" rows="1" ng-model="News.PicUrl" ></textarea>
+									</div>
+									
+							</div>
+							<div class="modal-footer">
+							   	<button type="button"  ng-click="ClearAddNews()" class="btn btn-primary">Clear</button>
+								<button type="button"  ng-click="AddNewNews()" class="btn btn-success" data-dismiss="modal">Add News</button>
+							   <button type="button"  class="btn btn-default" data-dismiss="modal">Cancel</button>
+							</div>
+						  </div>
+						</div>
+					</div>
+			<!-- End of Edit section -->
+		<!-- End of open the form for adding a new News  -->
+	  	<table class="table table-striped">
+			<thead>
+			  <tr style="padding:25px;">
+				<th>Id</th>
+				<th>Caption</th>
+				<th>Pictures</th>
+				<th></th>
+				<th></th>
+			  </tr>
+			</thead>
+			<tbody> 
+			<tr ng-repeat="News in NewsData | orderBy : 'Id'">
+				<td style="padding: 5px 30px 5px 30px;" >{{ News.Id }}</td>
+				<td style="padding: 5px 30px 5px 30px;">{{ News.Caption }}</td>
+				<td style="padding: 5px 30px 5px 30px;">
+					<a target="_blank" href="images/News/{{News.PicUrl}}">
+						<img src="images/News/{{News.PicUrl}}" style="width:200px;">
+					</a>
+				</td>
+				<td><button type="button"  ng-click="edit_News(News._id)" class="btn btn-warning">Edit</button></td>
+		
+				  <!-- Strat of edit section -->
+					  <div class="modal fade" id="News2" role="dialog">
+						<div class="modal-dialog">
+
+						  <!-- Modal content for News-->
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal">×</button>
+							  <h4 class="modal-title">News {{ News.Id }}</h4>
+							</div>
+							<div class="modal-body">
+									
+									<!-- Id -->
+									<div class="form-group">
+									  <label for="comment">Id of the News:</label>
+									  <input class="form-control" ng-model="News.Id " type="number">
+									  <!--<textarea class="form-control" rows="1" ng-model="Research.Id " ></textarea>-->
+									</div>		
+								    
+									<!-- Caption -->
+									<div class="form-group">
+									  <label for="comment">Caption:</label>
+									  <textarea class="form-control" rows="2" ng-model="News.Caption" ></textarea>
+									</div> 
+									
+									<!-- img -->
+									<div class="form-group">
+									  <label for="comment">Picture of News:</label><br><br>
+											<img src="images/News/{{ News.PicUrl }}" style="width:300px;">
+										<br>
+									</div>
+								
+									<!-- uploading pictures -->
+			
+									<div class="form-group">
+										<textarea class="form-control" rows="1" ng-model="News.PicUrl" ></textarea>
+									</div>
+							</div>
+							<div class="modal-footer">
+							   <button type="button"  ng-click="updateNews()" class="btn btn-success" data-dismiss="modal">Update</button>
+							   <button type="button"  class="btn btn-default" data-dismiss="modal">Cancel</button>
+							</div>
+						  </div>
+						</div>
+					</div>
+				  <!-- End of Edit section -->
+				
+				<td><button type="button" class="btn btn-danger" ng-click="RemoveReq_News(News._id)">Remove</button></td>
+				  <!-- Strat of delete News  -->
+					  <div class="modal fade" id="News3" role="dialog">
+						<div class="modal-dialog">
+
+						  <!-- Modal content for News-->
+						  <div class="modal-content">
+							<div class="modal-body">
+								<img src="images/SocialMedia_logo/warning.png" style="width:9%;">
+								<h4 style="display: inline;">   Are you sure you want to delete this News?</h4>
+								
+							</div>
+							<div class="modal-footer">
+							   <button type="button"  ng-click="Remove_News()" class="btn btn-danger" data-dismiss="modal">Yes</button>
+							   <button type="button"  class="btn btn-default" data-dismiss="modal">No</button>
+							</div>
+						  </div>
+						</div>
+					</div>
+				  <!-- End of delete News -->
+				 <!----------------------------------->
+			  </tr>
+			</tbody>
+  		</table>
 	</div>
-	
+	<!--------------------------------------------------------------------------------------->
+	<!--------------------------------------------------------------------------------------->
 	<!--  
 	/////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////
@@ -35,7 +191,7 @@
 	/////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////
 	-->
-	<div id="Research" class="tabcontent" >
+		<div id="Research" class="tabcontent" >
 		<!-- Saving message 1s-->
 			<div class="alert alert-success alert-dismissable fade in" ng-show="SavingAlert">
     			<strong>{{ SavingTxt }}</strong> 
@@ -230,7 +386,6 @@
 			</tbody>
   		</table>
 	</div>
-	
 	<!--------------------------------------------------------------------------------------->
 	<!--------------------------------------------------------------------------------------->
 	<!--  
@@ -240,7 +395,7 @@
 	/////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////
 	-->
-	<div id="Equipment" class="tabcontent">
+		<div id="Equipment" class="tabcontent">
 		<!-- Saving message 1s-->
 			<div class="alert alert-success alert-dismissable fade in" ng-show="SavingAlert">
     			<strong>{{ SavingTxt }}</strong> 
@@ -453,28 +608,347 @@
 			</tbody>
   		</table>
 	</div>
-	
 	<!--------------------------------------------------------------------------------------->
 	<!--------------------------------------------------------------------------------------->
-	
-	<!-- Summery Publication -->
-	<div id="Publication" class="tabcontent">
-	  <h3>Publication</h3>
-	  <p>page Publication</p>
+	<!--
+	/////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////// START OF Summery Publication ///////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	-->
+		<div id="Publication" class="tabcontent">
+		<!-- Saving message 1s-->
+			<div class="alert alert-success alert-dismissable fade in" ng-show="SavingAlert">
+    			<strong>{{ SavingTxt }}</strong> 
+  			</div>  
+		<!-- End of the saving message 1s -->
+		<!------------------------>
+	<h3>Publications</h3>
+		<!-- start of open the form for adding a new Publication -->
+		<button type="button1"  ng-click="OpenAddPublicationForm()" class="btn btn-success">Add a Publication</button><br><br>
+			<!-- Strat of edit section -->
+				<div class="modal fade" id="Publication1" role="dialog">
+						<div class="modal-dialog">
+
+						  <!-- Modal content for Publication-->
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal">×</button>
+							  <h4 class="modal-title">New Publication</h4>
+							</div>
+							<div class="modal-body">
+									
+									<!-- Id -->
+									<div class="form-group">
+									  <label for="comment">Id of the Publication:</label>
+									  <input class="form-control" ng-model="Publication.Id " type="number" min="1" >
+									</div>								
+								    
+									<!-- Authors -->
+									<div class="form-group">
+									  <label for="comment">Authors:</label>
+										<textarea class="form-control" rows="2" ng-model="Publication.Authors" ></textarea>
+									</div> 
+								    
+									<!-- Name of publication -->
+									<div class="form-group">
+									  <label for="comment">The Name of Publication:</label>
+									  <textarea class="form-control" rows="2" ng-model="Publication.Name" ></textarea>
+									</div> 	
+								
+									<!-- Full conference/Journals name in IEEE format -->
+									<div class="form-group">
+									  <label for="comment">Full conference/Journals name in IEEE format:</label>
+									  <textarea class="form-control" rows="2" ng-model="Publication.IEEE" ></textarea>
+									</div>   
+								      
+								
+									<!-- Location -->
+									<div class="form-group">
+									  <label for="comment">Location:</label>
+									  <textarea class="form-control" rows="1" ng-model="Publication.Location" ></textarea>
+									</div>
+									
+									<!-- Months -->
+									<div class="form-group">
+									  <label for="comment">Month:</label>
+									  	<select class="form-control" ng-model="Publication.Month">
+											<option></option>
+											<option>January</option>
+											<option>February</option>
+											<option>March</option>
+											<option>April</option>
+											<option>May</option>
+											<option>June</option>
+											<option>July</option>
+											<option>August</option>
+											<option>September</option>
+											<option>October</option>
+											<option>November</option>
+											<option>December</option>
+										</select>
+									</div>									
+									
+									<!-- Year -->
+									<div class="form-group">
+									  <label for="comment">Year:</label>
+									  <input class="form-control" ng-model="Publication.Year" type="number" min="1" >
+									</div>
+									
+							</div>
+							<div class="modal-footer">
+							   	<button type="button"  ng-click="ClearAddPublication()" class="btn btn-primary">Clear</button>
+								<button type="button"  ng-click="AddNewPublication()" class="btn btn-success" data-dismiss="modal">Add Publication</button>
+							   <button type="button"  class="btn btn-default" data-dismiss="modal">Cancel</button>
+							</div>
+						  </div>
+						</div>
+					</div>
+			<!-- End of Edit section -->
+		<!-- End of open the form for adding a new Publication  -->
+	  	<table class="table table-striped">
+			<thead>
+			  <tr>
+				<th>Id</th>
+				<th>Authors</th>
+				<th>Publication Name</th>
+				<th>Location</th>
+				<th>Year</th>
+				<th></th>
+				<th></th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr ng-repeat="Publication in PublicationData | orderBy : 'Id'">
+				<td>{{ Publication.Id }}   </td>
+				<td>{{ Publication.Authors }}</td>
+				<td>{{ Publication.Name }}</td>
+				<td>{{ Publication.Location }}</td>
+				<td>{{ Publication.Year}}</td>
+				<td><button type="button"  ng-click="edit_Publication(Publication._id)" class="btn btn-warning">Edit</button></td>
+				  <!-- Strat of edit section -->
+					  <div class="modal fade" id="Publication2" role="dialog">
+						<div class="modal-dialog">
+
+						  <!-- Modal content for Publication-->
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal">×</button>
+							  <h4 class="modal-title">Publication {{ Publication.Id }}</h4>
+							</div>
+							<div class="modal-body">
+									
+									<!-- Id -->
+									<div class="form-group">
+									  <label for="comment">Id of the Publication:</label>
+									  <input class="form-control" ng-model="Publication.Id " type="number" min="1" >
+									</div>								
+								    
+									<!-- Authors -->
+									<div class="form-group">
+									  <label for="comment">Authors:</label>
+										<textarea class="form-control" rows="2" ng-model="Publication.Authors" ></textarea>
+									</div> 
+								    
+									<!-- Name of publication -->
+									<div class="form-group">
+									  <label for="comment">The Name of Publication:</label>
+									  <textarea class="form-control" rows="2" ng-model="Publication.Name" ></textarea>
+									</div> 	
+								
+									<!-- Full conference/Journals name in IEEE format -->
+									<div class="form-group">
+									  <label for="comment">Full conference/Journals name in IEEE format:</label>
+									  <textarea class="form-control" rows="2" ng-model="Publication.IEEE" ></textarea>
+									</div>   
+								      
+									<!-- Location -->
+									<div class="form-group">
+									  <label for="comment">Location:</label>
+									  <textarea class="form-control" rows="1" ng-model="Publication.Location" ></textarea>
+									</div>
+									
+									<!-- Months -->
+									<div class="form-group">
+									  <label for="comment">Month:</label>
+									  	<select class="form-control" ng-model="Publication.Month">
+											<option></option>
+											<option>January</option>
+											<option>February</option>
+											<option>March</option>
+											<option>April</option>
+											<option>May</option>
+											<option>June</option>
+											<option>July</option>
+											<option>August</option>
+											<option>September</option>
+											<option>October</option>
+											<option>November</option>
+											<option>December</option>
+										</select>
+									</div>									
+									
+									<!-- Year -->
+									<div class="form-group">
+									  <label for="comment">Year:</label>
+									  <input class="form-control" ng-model="Publication.Year" type="number" min="1" >
+									</div>
+								
+							</div>
+							<div class="modal-footer">
+							   <button type="button"  ng-click="update_Publication()" class="btn btn-success" data-dismiss="modal">Update</button>
+							   <button type="button"  class="btn btn-default" data-dismiss="modal">Cancel</button>
+							</div>
+						  </div>
+						</div>
+					</div>
+				  <!-- End of Edit section -->
+				<!----------------------------------->
+				<td><button type="button" class="btn btn-danger" ng-click="RemoveReq_Publication(Publication._id)">Remove</button></td>
+				  <!-- Strat of delete Publication  -->
+					  <div class="modal fade" id="Publication3" role="dialog">
+						<div class="modal-dialog">
+
+						  <!-- Modal content for Publication-->
+						  <div class="modal-content">
+							<div class="modal-body">
+								<img src="images/SocialMedia_logo/warning.png" style="width:9%;">
+								<h4 style="display: inline;">   Are you sure you want to delete this Publication?</h4>
+								
+							</div>
+							<div class="modal-footer">
+							   <button type="button"  ng-click="Remove_Publication()" class="btn btn-danger" data-dismiss="modal">Yes</button>
+							   <button type="button"  class="btn btn-default" data-dismiss="modal">No</button>
+							</div>
+						  </div>
+						</div>
+					</div>
+				  <!-- End of delete Publication -->
+				 <!----------------------------------->
+			  </tr>
+			</tbody>
+  		</table>
+	</div>	
+	<!--------------------------------------------------------------------------------------->
+	<!--------------------------------------------------------------------------------------->	
+	<!--  
+	/////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////// START OF Summery Gallery ///////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	-->	
+		<div id="Gallery" class="tabcontent">
+		<!-- Saving message 1s-->
+			<div class="alert alert-success alert-dismissable fade in" ng-show="SavingAlert">
+    			<strong>{{ SavingTxt }}</strong> 
+  			</div>  
+		<!-- End of the saving message 1s -->
+		<!------------------------>
+	<h3>Gallery</h3>
+		<!-- start of open the form for adding a new pic -->
+		<button type="button1"  ng-click="OpenAddGalleryForm()" class="btn btn-success">Add a Picture</button><br><br>
+			<!-- Strat of edit section -->
+				<div class="modal fade" id="Gallery1" role="dialog">
+						<div class="modal-dialog">
+
+						  <!-- Modal content for pic-->
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal">×</button>
+							  <h4 class="modal-title">New Picture</h4>
+							</div>
+							<div class="modal-body">
+									
+									<!-- Id -->
+									<div class="form-group">
+									  <label for="comment">Id:</label>
+									  <input class="form-control" ng-model="Gallery.Id " type="number" min="1" >
+									</div>								
+								    
+								    
+									<!-- Name of the picture -->
+									<div class="form-group">
+									  <label for="comment">Name:</label>
+									  <textarea class="form-control" rows="1" ng-model="Gallery.Name" ></textarea>
+									</div> 	
+								
+									
+									<!-- img -->
+									<div class="form-group">
+									  <label for="comment">Picture </label><br><br>
+											<img src="images/Gallery/{{Gallery.PicUrl}}" style="width:300px;">
+										<br>
+									</div>
+									
+									<!-- Adding a picture -->
+									<div class="form-group">
+										<label for="comment">Adding a picture</label>
+										<textarea class="form-control" rows="1" ng-model="Gallery.PicUrl" ></textarea>
+									</div>
+									
+							</div>
+							<div class="modal-footer">
+							   	<button type="button"  ng-click="ClearAddGallery()" class="btn btn-primary">Clear</button>
+								<button type="button"  ng-click="AddNewGallery()" class="btn btn-success" data-dismiss="modal">Add Picture</button>
+							   <button type="button"  class="btn btn-default" data-dismiss="modal">Cancel</button>
+							</div>
+						  </div>
+						</div>
+					</div>
+			<!-- End of Edit section -->
+		<!-- End of open the form for adding a new pic  -->
+	  	<table class="table table-striped">
+			<thead>
+			  <tr style="padding:25px;">
+				<th>Id</th>
+				<th>Name</th>
+				<th>Pictures</th>
+				<th></th>
+				<th></th>
+			  </tr>
+			</thead>
+			<tbody> 
+			<tr ng-repeat="Gallery in GalleryData | orderBy : 'Id'">
+				<td style="padding: 5px 30px 5px 30px;" >{{ Gallery.Id }}</td>
+				<td style="padding: 5px 30px 5px 30px;">{{ Gallery.Name }}</td>
+				<td style="padding: 5px 30px 5px 30px;">
+					<a target="_blank" href="images/Gallery/{{Gallery.PicUrl}}">
+						<img src="images/Gallery/{{Gallery.PicUrl}}" style="width:130px;">
+					</a>
+				</td>
+				<td><button type="button" class="btn btn-danger" ng-click="RemoveReq_Gallery(Gallery._id)">Remove</button></td>
+				  <!-- Strat of delete pic  -->
+					  <div class="modal fade" id="Gallery3" role="dialog">
+						<div class="modal-dialog">
+
+						  <!-- Modal content for pic-->
+						  <div class="modal-content">
+							<div class="modal-body">
+								<img src="images/SocialMedia_logo/warning.png" style="width:9%;">
+								<h4 style="display: inline;">   Are you sure you want to delete this Picture?</h4>
+								
+							</div>
+							<div class="modal-footer">
+							   <button type="button"  ng-click="Remove_Gallery()" class="btn btn-danger" data-dismiss="modal">Yes</button>
+							   <button type="button"  class="btn btn-default" data-dismiss="modal">No</button>
+							</div>
+						  </div>
+						</div>
+					</div>
+				  <!-- End of delete pic -->
+				 <!----------------------------------->
+			  </tr>
+			</tbody>
+  		</table>
 	</div>
-	
-	<!-- Summery Gallery -->
-	<div id="Gallery" class="tabcontent">
-	  <h3>Gallery</h3>
-	  <p>Gallery page</p>
-	</div>
-	
 	<!--------------------------------------------------------------------------------------->
 	<!--------------------------------------------------------------------------------------->
 	<!--  
 	/////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////
-	//////////////////////////// START OF ummery People /////////////////////////////////
+	//////////////////////////// START OF Summery People ////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////
 	-->	
