@@ -8,12 +8,59 @@
  * Controller of the camApp
  */
 angular.module('camApp')
-  .controller('EquipmentCtrl', function () {
+  .controller('EquipmentCtrl', function ($http,$scope) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+		
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////// fetch and show the data in to equipment PAGE ////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+	
+	// get data from db and show it to the table
+				$http({
+					method : "GET",
+					url : "http://localhost:5000/api/equipment",
+				}).then(function mySuccess(response) {
+					console.log("I got the data for Equipment pgae I requested");
+					$scope.EquipmentData = response.data;
+				}, function myError(response) {
+					$scope.myWelcome = "Something went wrong";
+				});	
+	
+	// filter just for Robot section 
+		$scope.Equipment_Robot_Filter = function(item) {
+		  return (item.Group == 'Robots');
+		};
+
+	// filter just for 3D Printers section 
+		$scope.Equipment_3DPrinters_Filter = function(item) {
+		  return (item.Group == '3D_Printers');
+		};
+	
+	// filter just for CNC Machines section 
+		$scope.Equipment_CNCMachines_Filter = function(item) {
+		  return (item.Group == 'CNC_Machines');
+		};
+
+	// filter just for Molding/ Forming section
+		$scope.Equipment_Molding_Filter = function(item) {
+		  return (item.Group == 'Molding_Forming');
+		};
+
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+		
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// show te pop up window equipment PAGE -- need to be fixed ////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////	
 
 	$(document).ready(function(){
   
@@ -84,7 +131,17 @@ angular.module('camApp')
 			$("#myModal22").modal({backdrop: "static"});
 		});
 	});
-///////////	
+
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+		
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+///////////////////  ////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////	
+	
+	/* i dont know what is it
 	$(document).ready(function(){
     	$("#flip1").click(function(){
         $("#panel1").slideToggle("slow");
@@ -92,33 +149,49 @@ angular.module('camApp')
 		$("#flip2").click(function(){
         $("#panel2").slideToggle("slow");
     	});
-	});
-//////////
-/// robot section
+	});*/
+	
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+		
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// routeting pictures in equipment PAGE ////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////		
+	
 	$(document).ready(function () {
-    $('.carousel').carousel({
-        interval:2000
-    });
+		$('.carousel').carousel({
+			interval:2000
+		});
 
-    $('.carousel').carousel('cycle');
+		$('.carousel').carousel('cycle');
 	});
 	
-////////
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+		
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// Addressing to diffrent section in equipment PAGE ////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////	
 	
 	$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
-	
+	  $('a[href*=#]:not([href=#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		  var target = $(this.hash);
+		  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		  if (target.length) {
+			$('html,body').animate({
+			  scrollTop: target.offset().top
+			}, 1000);
+			return false;
+		  }
+		}
+	  });
+	});
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------	
 	
  });
