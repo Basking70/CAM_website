@@ -84,7 +84,12 @@
 									  <textarea class="form-control" rows="5" ng-model="Research.Content" ></textarea>
 									</div>
 								
-									<!-- uploading pictures -->
+									<!-- img -->
+									<div class="form-group">
+									  <label for="comment">Picture of the research</label><br><br>
+											<img src="images/research/{{ Research.PicUrl }}" style="width:300px;">
+										<br>
+									</div>
 								
 									<div class="form-group">
 											<label for="comment">Uploading a picture</label>
@@ -180,13 +185,12 @@
 									<!-- img -->
 									<div class="form-group">
 									  <label for="comment">Picture of the research</label><br><br>
-									  	<a target="_blank" href="images/research/{{ Research.PicUrl }}}">
 											<img src="images/research/{{ Research.PicUrl }}" style="width:300px;">
-										</a><br>
+										<br>
 									</div>
 								
 									<!-- uploading pictures -->
-								
+			
 									<div class="form-group">
 										<textarea class="form-control" rows="1" ng-model="Research.PicUrl" ></textarea>
 									</div>
@@ -267,7 +271,12 @@
 									<!-- Group -->
 									<div class="form-group">
 									  <label for="comment">Group of the Equipment:</label>
-									  <textarea class="form-control" rows="2" ng-model="Equipment.Group" ></textarea>
+										<select class="form-control" ng-model="Equipment.Group">
+											<option>Robots</option>
+											<option>3D_Printers</option>
+											<option>CNC_Machines</option>
+											<option>Molding_Forming</option>
+										</select>
 									</div> 
 								    
 									<!-- CompanyName -->
@@ -293,8 +302,15 @@
 									<div class="form-group">
 									  <label for="comment">Read More of the Equipment(Name of the PDF):</label>
 									  <textarea class="form-control" rows="1" ng-model="Equipment.ReadMore" ></textarea>
-									</div>												
+									</div>	
 								
+									<!-- img -->
+									<div class="form-group">
+									  <label for="comment">Picture of the research</label><br><br>
+											<img src="images/Machines/{{Equipment.Group}}/{{ Equipment.PicUrl }}" style="width:300px;">
+										<br>
+									</div>
+									
 									<!-- Adding a picture -->
 								
 									<div class="form-group">
@@ -356,7 +372,12 @@
 									<!-- Group -->
 									<div class="form-group">
 									  <label for="comment">Group of the Equipment:</label>
-									  <textarea class="form-control" rows="2" ng-model="Equipment.Group" ></textarea>
+										<select class="form-control" placeholder="{{Equipment.Group}}" ng-model="Equipment.Group">
+											<option>Robots</option>
+											<option>3D_Printers</option>
+											<option>CNC_Machines</option>
+											<option>Molding/Forming</option>
+										</select>
 									</div> 
 								    
 									<!-- CompanyName -->
@@ -382,10 +403,16 @@
 									<div class="form-group">
 									  <label for="comment">Read More of the Equipment(Name of the PDF):</label>
 									  <textarea class="form-control" rows="1" ng-model="Equipment.ReadMore" ></textarea>
-									</div>												
+									</div>	
+								
+									<!-- img -->
+									<div class="form-group">
+									  <label for="comment">Picture of the research</label><br><br>
+											<img src="images/Machines/{{Equipment.Group}}/{{ Equipment.PicUrl }}" style="width:300px;">
+										<br>
+									</div>
 								
 									<!-- Adding a picture -->
-								
 									<div class="form-group">
 										<label for="comment">Adding a picture</label>
 										<textarea class="form-control" rows="1" ng-model="Equipment.PicUrl" ></textarea>
@@ -420,7 +447,7 @@
 						  </div>
 						</div>
 					</div>
-				  <!-- End of delete reseach -->
+				  <!-- End of delete Equipment -->
 				 <!----------------------------------->
 			  </tr>
 			</tbody>
@@ -442,13 +469,267 @@
 	  <p>Gallery page</p>
 	</div>
 	
-	<!-- Summery People --> 
+	<!--------------------------------------------------------------------------------------->
+	<!--------------------------------------------------------------------------------------->
+	<!--  
+	/////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////// START OF ummery People /////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////
+	-->	
 	<div id="People" class="tabcontent">
-	  <h3>People</h3>
-	  <p>People page</p>
+		<!-- Saving message 1s-->
+			<div class="alert alert-success alert-dismissable fade in" ng-show="SavingAlert">
+    			<strong>{{ SavingTxt }}</strong> 
+  			</div>  
+		<!-- End of the saving message 1s -->
+		<!------------------------>
+	<h3>People</h3>
+		<!-- start of open the form for adding a new Equipment -->
+		<button type="button1"  ng-click="OpenAddPeopleForm()" class="btn btn-success">Add a Person</button><br><br>
+			<!-- Strat of edit section -->
+				<div class="modal fade" id="People1" role="dialog">
+						<div class="modal-dialog">
+
+						  <!-- Modal content for person-->
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal">×</button>
+							  <h4 class="modal-title">New Person</h4>
+							</div>
+							<div class="modal-body">
+									
+									<!-- Id -->
+									<div class="form-group">
+									  <label for="comment">Id of the Person:</label>
+									  <input class="form-control" ng-model="People.Id " type="number" min="1" >
+									</div>								
+								    
+									<!-- Group -->
+									<div class="form-group">
+									  <label for="comment">Group of the Person:</label>
+										<select class="form-control" ng-model="People.Group">
+											<option>Faculty</option>
+											<option>Research_Staff</option>
+											<option>Students</option>
+										</select>
+									</div> 
+								    
+									<!-- Full Name -->
+									<div class="form-group">
+									  <label for="comment">Full Name:</label>
+									  <textarea class="form-control" rows="2" ng-model="People.Name" ></textarea>
+									</div> 	
+								
+									<!-- Title -->
+									<div class="form-group">
+									  <label for="comment">Title:</label>
+									  <textarea class="form-control" rows="2" ng-model="People.Title" ></textarea>
+									</div>   
+								      
+									<!-- Research Area -->
+									<div class="form-group">
+									  <label for="comment">Research Area:</label>
+									  <textarea class="form-control" rows="5" ng-model="People.ResearchArea" ></textarea>
+									</div>
+									
+									<!-- Current Projects -->
+									<div class="form-group">
+									  <label for="comment">Current Projects:</label>
+									  <textarea class="form-control" rows="1" ng-model="People.CurrentProjects" ></textarea>
+									</div>									
+									
+									<!-- Email -->
+									<div class="form-group">
+									  <label for="comment">Email:</label>
+									  <textarea class="form-control" rows="1" ng-model="People.Email" ></textarea>
+									</div>									
+								
+									<!-- Phone -->
+									<div class="form-group">
+									  <label for="comment">Phone:</label>
+									  <textarea class="form-control" rows="1" ng-model="People.Phone" ></textarea>
+									</div>
+									
+									<!-- Website -->
+									<div class="form-group">
+									  <label for="comment">Website:</label>
+									  <textarea class="form-control" rows="1" ng-model="People.Website" ></textarea>
+									</div>
+
+									<!-- img -->
+									<div class="form-group">
+									  <label for="comment">Picture of the research</label><br><br>
+											<img src="images/People/{{People.Group}}/{{ People.PicUrl }}" style="width:300px;">
+										<br>
+									</div>
+									
+									<!-- Adding a picture -->
+									<div class="form-group">
+										<label for="comment">Adding a picture</label>
+										<textarea class="form-control" rows="1" ng-model="People.PicUrl" ></textarea>
+									</div>
+									
+							</div>
+							<div class="modal-footer">
+							   	<button type="button"  ng-click="ClearAddPeople()" class="btn btn-primary">Clear</button>
+								<button type="button"  ng-click="AddNewPeople()" class="btn btn-success" data-dismiss="modal">Add Equipment</button>
+							   <button type="button"  class="btn btn-default" data-dismiss="modal">Cancel</button>
+							</div>
+						  </div>
+						</div>
+					</div>
+			<!-- End of Edit section -->
+		<!-- End of open the form for adding a new Person  -->
+	  	<table class="table table-striped">
+			<thead>
+			  <tr>
+				<th>Id</th>
+				<th>Group</th>
+				<th>Name</th>
+				<th>Title</th>
+				<th>Email</th>
+				<th></th>
+				<th></th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr ng-repeat="People in PeopleData | orderBy : 'Id'">
+				<td>{{ People.Id }}   </td>
+				<td>{{ People.Group }}</td>
+				<td>{{ People.Name }}</td>
+				<td>{{ People.Title }}</td>
+				<td>{{ People.Email }}</td>
+				<td><button type="button"  ng-click="edit_People(People._id)" class="btn btn-warning">Edit</button></td>
+				  <!-- Strat of edit section -->
+					  <div class="modal fade" id="People2" role="dialog">
+						<div class="modal-dialog">
+
+						  <!-- Modal content for person-->
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal">×</button>
+							  <h4 class="modal-title">People {{ People.Id }}</h4>
+							</div>
+							<div class="modal-body">
+									
+									<!-- Id -->
+									<div class="form-group">
+									  <label for="comment">Id of the Person:</label>
+									  <input class="form-control" ng-model="People.Id " type="number" min="1" >
+									</div>								
+								    
+									<!-- Group -->
+									<div class="form-group">
+									  <label for="comment">Group of the Person:</label>
+										<select class="form-control" ng-model="People.Group">
+											<option>Faculty</option>
+											<option>Research_Staff</option>
+											<option>Students</option>
+										</select>
+									</div> 
+								    
+									<!-- Full Name -->
+									<div class="form-group">
+									  <label for="comment">Full Name:</label>
+									  <textarea class="form-control" rows="2" ng-model="People.Name" ></textarea>
+									</div> 	
+								
+									<!-- Title -->
+									<div class="form-group">
+									  <label for="comment">Title:</label>
+									  <textarea class="form-control" rows="2" ng-model="People.Title" ></textarea>
+									</div>   
+								      
+									<!-- Research Area -->
+									<div class="form-group">
+									  <label for="comment">Research Area:</label>
+									  <textarea class="form-control" rows="5" ng-model="People.ResearchArea" ></textarea>
+									</div>
+									
+									<!-- Current Projects -->
+									<div class="form-group">
+									  <label for="comment">Current Projects:</label>
+									  <textarea class="form-control" rows="1" ng-model="People.CurrentProjects" ></textarea>
+									</div>									
+									
+									<!-- Email -->
+									<div class="form-group">
+									  <label for="comment">Email:</label>
+									  <textarea class="form-control" rows="1" ng-model="People.Email" ></textarea>
+									</div>									
+								
+									<!-- Phone -->
+									<div class="form-group">
+									  <label for="comment">Phone:</label>
+									  <textarea class="form-control" rows="1" ng-model="People.Phone" ></textarea>
+									</div>
+									
+									<!-- Website -->
+									<div class="form-group">
+									  <label for="comment">Website:</label>
+									  <textarea class="form-control" rows="1" ng-model="People.Website" ></textarea>
+									</div>
+
+									<!-- img -->
+									<div class="form-group">
+									  <label for="comment">Picture of the research</label><br><br>
+											<img src="images/People/{{People.Group}}/{{ People.PicUrl }}" style="width:300px;">
+										<br>
+									</div>
+									
+									<!-- Adding a picture -->
+									<div class="form-group">
+										<label for="comment">Adding a picture</label>
+										<textarea class="form-control" rows="1" ng-model="People.PicUrl" ></textarea>
+									</div>
+									
+								
+							</div>
+							<div class="modal-footer">
+							   <button type="button"  ng-click="update_People()" class="btn btn-success" data-dismiss="modal">Update</button>
+							   <button type="button"  class="btn btn-default" data-dismiss="modal">Cancel</button>
+							</div>
+						  </div>
+						</div>
+					</div>
+				  <!-- End of Edit section -->
+				<!----------------------------------->
+				<td><button type="button" class="btn btn-danger" ng-click="RemoveReq_Equipment(Equipment._id)">Remove</button></td>
+				  <!-- Strat of delete reseach  -->
+					  <div class="modal fade" id="Equipment3" role="dialog">
+						<div class="modal-dialog">
+
+						  <!-- Modal content for person-->
+						  <div class="modal-content">
+							<div class="modal-body">
+								<img src="images/SocialMedia_logo/warning.png" style="width:9%;">
+								<h4 style="display: inline;">   Are you sure you want to delete this research?</h4>
+								
+							</div>
+							<div class="modal-footer">
+							   <button type="button"  ng-click="Remove_Equipment()" class="btn btn-danger" data-dismiss="modal">Yes</button>
+							   <button type="button"  class="btn btn-default" data-dismiss="modal">No</button>
+							</div>
+						  </div>
+						</div>
+					</div>
+				  <!-- End of delete reseach -->
+				 <!----------------------------------->
+			  </tr>
+			</tbody>
+  		</table>
 	</div>
 	
+	
+	
+<!--------------------------------------------------------------------------------------->
+<!---------------------------------- End of tabs ---------------------------------------->	
+<!--------------------------------------------------------------------------------------->	
+	
 </div>
+	
 
 
 
