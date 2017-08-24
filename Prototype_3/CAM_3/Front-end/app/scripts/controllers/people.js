@@ -8,13 +8,54 @@
  * Controller of the camApp
  */
 angular.module('camApp')
-  .controller('PeopleCtrl', function () {
+  .controller('PeopleCtrl', function ($http,$scope) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
 	
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////// fetch and show the data in to equipment PAGE ////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+	
+	// get data from db and show it to the table
+				$http({
+					method : "GET",
+					url : "http://localhost:5000/api/people",
+				}).then(function mySuccess(response) {
+					console.log("I got the data for People page I requested");
+					$scope.PeopleData = response.data;
+				}, function myError(response) {
+					$scope.myWelcome = "Something went wrong";
+				});	
+	
+	// filter just for Faculty section 
+		$scope.People_Faculty_Filter = function(item) {
+		  return (item.Group == 'Faculty');
+		};
+
+	// filter just for Research_Staff section 
+		$scope.People_Staff_Filter = function(item) {
+		  return (item.Group == 'Research_Staff');
+		};
+	
+	// filter just for Students section 
+		$scope.People_Students_Filter = function(item) {
+		  return (item.Group == 'Students');
+		};
+
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+		
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// show te pop up window equipment PAGE -- need to be fixed ////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
 	
 	$(document).ready(function(){
   	/// btn1
@@ -191,3 +232,6 @@ angular.module('camApp')
 		
     });
   });
+
+//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
