@@ -183,7 +183,6 @@ $(document).ready(function(){
     $("#btm16").html('<span class="glyphicon glyphicon-collapse-up"></span> Read Less');
   });
 });
-
 	
   });
 
