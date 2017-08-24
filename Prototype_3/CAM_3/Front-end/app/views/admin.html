@@ -519,13 +519,13 @@
 									<!-- Full Name -->
 									<div class="form-group">
 									  <label for="comment">Full Name:</label>
-									  <textarea class="form-control" rows="2" ng-model="People.Name" ></textarea>
+									  <textarea class="form-control" rows="1" ng-model="People.Name" ></textarea>
 									</div> 	
 								
 									<!-- Title -->
 									<div class="form-group">
 									  <label for="comment">Title:</label>
-									  <textarea class="form-control" rows="2" ng-model="People.Title" ></textarea>
+									  <textarea class="form-control" rows="1" ng-model="People.Title" ></textarea>
 									</div>   
 								      
 									<!-- Research Area -->
@@ -537,7 +537,7 @@
 									<!-- Current Projects -->
 									<div class="form-group">
 									  <label for="comment">Current Projects:</label>
-									  <textarea class="form-control" rows="1" ng-model="People.CurrentProjects" ></textarea>
+									  <textarea class="form-control" rows="5" ng-model="People.CurrentProjects" ></textarea>
 									</div>									
 									
 									<!-- Email -->
@@ -557,7 +557,7 @@
 									  <label for="comment">Website:</label>
 									  <textarea class="form-control" rows="1" ng-model="People.Website" ></textarea>
 									</div>
-
+									
 									<!-- img -->
 									<div class="form-group">
 									  <label for="comment">Picture of the research</label><br><br>
@@ -633,13 +633,13 @@
 									<!-- Full Name -->
 									<div class="form-group">
 									  <label for="comment">Full Name:</label>
-									  <textarea class="form-control" rows="2" ng-model="People.Name" ></textarea>
+									  <textarea class="form-control" rows="1" ng-model="People.Name" ></textarea>
 									</div> 	
 								
 									<!-- Title -->
 									<div class="form-group">
 									  <label for="comment">Title:</label>
-									  <textarea class="form-control" rows="2" ng-model="People.Title" ></textarea>
+									  <textarea class="form-control" rows="1" ng-model="People.Title" ></textarea>
 									</div>   
 								      
 									<!-- Research Area -->
@@ -651,7 +651,7 @@
 									<!-- Current Projects -->
 									<div class="form-group">
 									  <label for="comment">Current Projects:</label>
-									  <textarea class="form-control" rows="1" ng-model="People.CurrentProjects" ></textarea>
+									  <textarea class="form-control" rows="5" ng-model="People.CurrentProjects" ></textarea>
 									</div>									
 									
 									<!-- Email -->
@@ -678,7 +678,7 @@
 											<img src="images/People/{{People.Group}}/{{ People.PicUrl }}" style="width:300px;">
 										<br>
 									</div>
-									
+								
 									<!-- Adding a picture -->
 									<div class="form-group">
 										<label for="comment">Adding a picture</label>
@@ -696,9 +696,9 @@
 					</div>
 				  <!-- End of Edit section -->
 				<!----------------------------------->
-				<td><button type="button" class="btn btn-danger" ng-click="RemoveReq_Equipment(Equipment._id)">Remove</button></td>
-				  <!-- Strat of delete reseach  -->
-					  <div class="modal fade" id="Equipment3" role="dialog">
+				<td><button type="button" class="btn btn-danger" ng-click="RemoveReq_People(People._id)">Remove</button></td>
+				  <!-- Strat of delete People  -->
+					  <div class="modal fade" id="People3" role="dialog">
 						<div class="modal-dialog">
 
 						  <!-- Modal content for person-->
@@ -709,13 +709,13 @@
 								
 							</div>
 							<div class="modal-footer">
-							   <button type="button"  ng-click="Remove_Equipment()" class="btn btn-danger" data-dismiss="modal">Yes</button>
+							   <button type="button"  ng-click="Remove_People()" class="btn btn-danger" data-dismiss="modal">Yes</button>
 							   <button type="button"  class="btn btn-default" data-dismiss="modal">No</button>
 							</div>
 						  </div>
 						</div>
 					</div>
-				  <!-- End of delete reseach -->
+				  <!-- End of delete People -->
 				 <!----------------------------------->
 			  </tr>
 			</tbody>
