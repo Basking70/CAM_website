@@ -91,12 +91,12 @@
 		<!-- End of open the form for adding a new News  -->
 	  	<table class="table table-striped">
 			<thead>
-			  <tr style="padding:25px;">
-				<th>Id</th>
-				<th>Caption</th>
-				<th>Pictures</th>
-				<th></th>
-				<th></th>
+			  <tr>
+				<th style="padding: 5px 30px 5px 30px;">Id</th>
+				<th style="padding: 5px 30px 5px 30px;">Caption</th>
+				<th style="padding: 5px 30px 5px 30px;">Pictures</th>
+				<th style="padding: 5px 30px 5px 30px;"></th>
+				<th style="padding: 5px 30px 5px 30px;"></th>
 			  </tr>
 			</thead>
 			<tbody> 
@@ -239,37 +239,30 @@
 									  <label for="comment">Content of the research:</label>
 									  <textarea class="form-control" rows="5" ng-model="Research.Content" ></textarea>
 									</div>
-								
+									
+									<!-- References -->
+									<div class="form-group">
+										<input type="checkbox" ng-model="Research.ReferenceShow">
+										<label for="comment">Adding Reference to the Research</label>
+										<div ng-show="Research.ReferenceShow"><br>
+											<label for="comment">Reference of research:</label>
+											<textarea class="form-control" rows="1" ng-model="Research.Reference"></textarea>
+										</div>
+									</div>
+									
 									<!-- img -->
 									<div class="form-group">
-									  <label for="comment">Picture of the research</label><br><br>
+											<label for="comment">Uploading a picture:</label>
+											<textarea class="form-control" rows="1" ng-model="Research.PicUrl" ></textarea>
+									</div>
+									<br>
+									<div class="form-group">
+									  <label for="comment">Preview of uploaded picture:</label><br><br>
 											<img ng-src="images/research/{{ Research.PicUrl }}" style="width:300px;">
 										<br>
 									</div>
 								
-									<div class="form-group">
-											<label for="comment">Uploading a picture</label>
-										<!-- The code for uploading picture to the system
-										<br>
-										<br>
-											<img style="width: 30%;" ng-src="{{thumbnail.dataUrl || ' https://thebenclark.files.wordpress.com/2014/03/facebook-default-no-profile-pic.jpg' }}">
-										<br>
-										<br>
-											<div ng-show="uploading" class="progress">
-												<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
-												  {{  }}
-												</div>
-											</div>
-										<br>
-											<form>
-												<label class="btn btn-success">
-													Browse
-												</label>
-												<input type="file" name="ResearchPic" ng-disabled= "uploading" style="display: none;" >
-											</form> 
-										-->
-											<textarea class="form-control" rows="1" ng-model="Research.PicUrl" ></textarea>
-									</div>
+
 									
 							</div>
 							<div class="modal-footer">
@@ -338,18 +331,29 @@
 									  <textarea class="form-control" rows="5" ng-model="Research.Content" ></textarea>
 									</div>
 									
+									
+									<!-- References -->
+									<div class="form-group">
+										<input type="checkbox" ng-model="Research.ReferenceShow">
+										<label for="comment">Adding Reference to the Research</label>
+										<div ng-show="Research.ReferenceShow"><br>
+											<label for="comment">Reference of research:</label>
+											<textarea class="form-control" rows="1" ng-model="Research.Reference"></textarea>
+										</div>
+									</div>
+									
 									<!-- img -->
 									<div class="form-group">
-									  <label for="comment">Picture of the research</label><br><br>
+											<label for="comment">Uploading a picture:</label>
+											<textarea class="form-control" rows="1" ng-model="Research.PicUrl" ></textarea>
+									</div>
+									<br>
+									<div class="form-group">
+									  <label for="comment">Preview of uploaded picture:</label><br><br>
 											<img ng-src="images/research/{{ Research.PicUrl }}" style="width:300px;">
 										<br>
 									</div>
 								
-									<!-- uploading pictures -->
-			
-									<div class="form-group">
-										<textarea class="form-control" rows="1" ng-model="Research.PicUrl" ></textarea>
-									</div>
 							</div>
 							<div class="modal-footer">
 							   <button type="button"  ng-click="update()" class="btn btn-success" data-dismiss="modal">Update</button>
@@ -901,19 +905,17 @@
 		<!-- End of open the form for adding a new pic  -->
 	  	<table class="table table-striped">
 			<thead>
-			  <tr style="padding:25px;">
-				<th>Id</th>
-				<th>Name</th>
-				<th>Pictures</th>
-				<th></th>
-				<th></th>
+			  <tr>
+				<th style="padding: 5px 40px 5px 40px;">Id</th>
+				<th style="padding: 5px 40px 5px 40px;">Name</th>
+				<th style="padding: 5px 40px 5px 40px;">Pictures</th>
 			  </tr>
 			</thead>
 			<tbody> 
 			<tr ng-repeat="Gallery in GalleryData | orderBy : 'Id'">
-				<td style="padding: 5px 30px 5px 30px;" >{{ Gallery.Id }}</td>
-				<td style="padding: 5px 30px 5px 30px;">{{ Gallery.Name }}</td>
-				<td style="padding: 5px 30px 5px 30px;">
+				<td style="padding: 5px 40px 5px 40px;">{{ Gallery.Id }}</td>
+				<td style="padding: 5px 40px 5px 40px;">{{ Gallery.Name }}</td>
+				<td style="padding: 5px 40px 5px 40px;">
 					<a target="_blank" href="images/Gallery/{{Gallery.PicUrl}}">
 						<img ng-src="images/Gallery/{{Gallery.PicUrl}}" style="width:130px;">
 					</a>
