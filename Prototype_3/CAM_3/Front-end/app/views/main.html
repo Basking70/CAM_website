@@ -11,7 +11,7 @@
 		<div class="carousel-inner" >
 
 			<div class="item" ng-class="{active:!$index}" ng-repeat="News in NewsData | orderBy : 'Id'">
-				<img src="images/News/{{News.PicUrl}}" alt="{{ News.Caption }}" style="width:100%;">
+				<img ng-src="images/News/{{News.PicUrl}}" alt="{{ News.Caption }}" style="width:100%;">
 				<div class="carousel-caption">
 					<h3>{{ News.Caption }}</h3>
 				<!--<p></p>-->
