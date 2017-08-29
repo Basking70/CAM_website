@@ -3,7 +3,7 @@
 	<div class="well" ng-repeat="Research in ResearchData | orderBy : 'Id'">
 			<center>
 			<a target="_blank" href="images/research/{{ Research.PicUrl }}">
-				<img src="images/research/{{ Research.PicUrl }}" alt="reaserch {{ $index + 1 }}" style="width:45%;; float: right; margin: 0 0 10px 10px;">
+				<img ng-src="images/research/{{ Research.PicUrl }}" alt="reaserch {{ $index + 1 }}" style="width:45%;; float: right; margin: 0 0 10px 10px;">
 			</a>
 			</center>
 				<h4>{{Research.Id}} - {{Research.Name}}</h4>
