@@ -21,7 +21,7 @@ angular.module('camApp')
 		if ($scope.username == "admin" && $scope.password == "pass")
 			{
 				$scope.ErrAlert = false; // dosent show the alet message
-				$location.path('/admin'); //redirect to the admin page
+				$location.path('/vkjvkjk646jfdkjjdgvsldkjvbsjhv2423JSDGVSKJDVJSD7527235632MXHBVKDJVKSDJV'); //redirect to the admin page
 			}
 			else
 			{
