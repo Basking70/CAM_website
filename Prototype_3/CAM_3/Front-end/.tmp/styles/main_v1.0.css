@@ -308,7 +308,7 @@ div.tab2 button.active {
 
 /* Style the tab content */
 .tabcontent {
-    float: left;
+    float: center;
     padding: 20px 0px;
     width: auto;
     height: auto;
