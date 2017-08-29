@@ -7,130 +7,28 @@
 <p>---------------------------</p>
 
 <!-- publications for 2017 -->
-<div class="well" style="overflow: auto;">
-	<h3 id="2017" style="color: #991b1e">2017</h3>
-		<p>
-			 1. A.M. Kabir, J.D. Langsfeld, C. Zhuang, K.N. Kaipa, and S.K. Gupta. A Systematic Approach for Minimizing Physical Experiments to Identify Optimal Trajectory Parameters for Robots. <span style=" font-style: italic;">IEEE International Conference on Robotics and Automation,</span> Singapore, May 2017.
-		</p>
-		<p>
-			2. A. Alsharhan, T. Centea, and S.K. Gupta. Enhancing the Mechanical Properties of Thin-Walled Structures using Non-Planar Extrusion-based Additive Manufacturing.<span style=" font-style: italic;"> ASME Manufacturing Science and Engineering Conference,</span> Los Angeles, CA, USA, June 2017.
-		</p>
-		<p>
-			3. N. Bhatt, S. Thakar, K.N. Kaipa, J. Marvel,  and S.K. Gupta. Simulation-based On-line Evaluation of Singulation Plans to Handle Perception Uncertainty in Robotic Bin-Picking. <span style=" font-style: italic;"> ASME Manufacturing Science and Engineering Conference,</span> Los Angeles, CA, USA, June 2017.
-		</p>
-		<p>
-			4. A. M. Kabir, K. N. Kaipa, J. Marvel and S. K. Gupta, "Automated Planning for Robotic Cleaning Using Multiple Setups and Oscillatory Tool Motions," in<span style=" font-style: italic;"> IEEE Transactions on Automation Science and Engineering, vol. 14, no. 3, pp. 1364-1377,</span> July 2017.
-		</p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
+<div class="well" style="overflow: auto;" ng-repeat="Publication in PublicationData | filter: Publication_2017_Filter">
+	<h3 id="2017" style="color: #991b1e" >2017</h3>
+		<p>	
+			{{Publication._index + 1}}. {{ Publication.Authors }} {{ Publication.Name }}. <span style=" font-style: italic;"> {{ Publication.IEEE }} </span>, {{ Publication.Location }}, {{ Publication.Month }} {{ Publication.Year }}.
+		</p>	
 </div>
 
 <!-- publications for 2016 -->
-<div class="well" style="overflow: auto;">
+<div class="well" style="overflow: auto;" ng-repeat="Publication in PublicationData | filter: Publication_2016_Filter">
 	<h3 id="2016" style="color: #991b1e">2016</h3>
-		<p>
-			1. A. Perez-Rosado, H.A. Bruck and S.K. Gupta. Integrating solar cells into flapping wing air vehicles for enhanced flight endurance. ASME Journal of Mechanisms and Robotics, 8(10):051006, October, 2016.
-		</p>
-		<p>
-			2. Y.S. Kim, H. Shi, N.G. Dagalakis, and S.K. Gupta. Design of a MEMS-based motion stage based on a lever mechanism for generating large displacements and forces, Journal of Micromechanics and Microengineering, 26(9): 095008, 2016.
-		</p>
-		<p>
-			3. K.N. Kaipa, A.S. Kankanhalli-Nagendra, N.B. Kumbla, S. Shriyam, S. S. Thevendria-Karthic, J.A. Marvel, and S.K. Gupta.  Addressing perception uncertainty induced failure modes in robotic bin-picking. Robotics and Computer Integrated Manufacturing,  42(12):17-38, 2016 
-		</p>
-		<p>
-			4. L. Johnson, H.A. Bruck, and S.K. Gupta. Design, fabrication, and characterization of a soft, multi-fingered hand. ASME International Mechanical Engineering Congress and Exposition, Phoenix, AZ, November 11-17, 2016.
-		</p>
-		<p>
-			5. L. Roberts, H.A. Bruck, and S.K. Gupta. Using a large two degree of freedom tail for autonomous aerobatics on a flapping wing unmanned serial vehicle. ASME Mechanisms and Robotics Conference, Charlotte, NC, August 2016.
-		</p>
-		<p>
-			6. J. Gerdes, H.A. Bruck, and S.K. Gupta. Instrumenting a flapping wing air vehicle system for free flight measurement. ASME Mechanisms and Robotics Conference, Charlotte, NC, August 2016.
-		</p>
-		<p>
-			7. A. Holness, E. Steins, H.A.  Bruck, M. Peckerar, and S.K. Gupta. Performance characterization of multifunctional wings with integrated flexible batteries for flapping wing unmanned air vehicles. ASME Mechanisms and Robotics Conference, Charlotte, NC, August 2016.
-		</p>
-		<p>
-			8. A.M. Kabir, J.D. Langsfeld, S. Shriyam, V. Rachakonda, C. Zhaung, K.N. Kaipa, J. Marvel, and S.K. Gupta. Planning algorithms for multi-setup multi-pass robotic cleaning with oscillatory moving tools. IEEE International Conference on Automation Science and Engineering, Fort Worth, TX, August, 2016.
-		</p>
-		<p>
-			9. J.D. Langsfeld, A.M. Kabir, K.N. Kaipa, and S.K. Gupta. Robotic bimanual cleaning of deformable objects with online learning of part and tool models. IEEE International Conference on Automation Science and Engineering, Fort Worth, TX, August 2016.
-		</p>
-		<p>
-			10. K. N. Kaipa, A. S. Kankanhalli-Nagendra, N. B. Kumbla, S. Shriyam, S. S. Thevendria-Karthic, J. A. Marvel, and S. K. Gupta.  Enhancing robotic unstructured bin-picking performance by enabling remote human interventions in challenging perception scenarios. IEEE International Conference on Automation Science and Engineering, Fort Worth, TX, August 2016.
-
-		</p>
-		<p>
-			11. M. Bollavaram, P. Sane, S. Chowdhury, S.K. Gupta, and A. G. Banerjee. Automated detection of live cells and microspheres in low contrast bright field microscopy. International Conference on Manipulation, Automation and Robotics at Small Scales, Paris, France, July 2016.
-		</p>
-		<p>
-			12. J.D. Langsfeld, A. M. Kabir, K.N. Kaipa, and S.K. Gupta. Online learning of part deformation models in robotic cleaning. ASME Manufacturing Science and Engineering Conference, Blacksburg, USA, June 2016.
-		</p>
-		<p>
-			13. K.N. Kaipa, S. Shriyam, N. Kumbla, and S.K. Gupta. Resolving occlusions through simple extraction motions in robotic bin picking. ASME Manufacturing Science and Engineering Conference, Blacksburg, USA, June 2016.
-		</p>
-		<p>
-			14. A.M. Kabir, J.D. Langsfeld, C. Zhuang, K.N. Kaipa, and S.K. Gupta. Automated leaning of operation parameters for robotic cleaning by mechanical scrubbing. ASME Manufacturing Science and Engineering Conference, Blacksburg, USA, June 2016.
-		</p>
-		<p>
-			15. A. Narayanan, A. Kanyuck, S.K. Gupta, and S. Rachuri. Machine condition detection for milling operations using low cost ambient sensors. ASME Manufacturing Science and Engineering Conference, Blacksburg, USA, June 2016.
-		</p>
-		<p>
-			16. A.E. Holness, A. Perez-Rosado, H.A. Bruck, M. Peckerar, and S.K. Gupta. Multifunctional wings with flexible batteries and  solar cells for robotic birds.  SEM Annual Conference and Exposition, Orlando, FL, June 2016.
-
+		
+		<p>	
+			{{Publication._index + 1}}. {{ Publication.Authors }} {{ Publication.Name }}. <span style=" font-style: italic;"> {{ Publication.IEEE }} </span>, {{ Publication.Location }}, {{ Publication.Month }} {{ Publication.Year }}.
 		</p>
 </div>
 
 <!-- publications for 2015 -->
-<div class="well" style="overflow: auto;">
+<div class="well" style="overflow: auto;" ng-repeat="Publication in PublicationData | filter: Publication_2015_Filter">
 	<h3 id="2015" style="color: #991b1e">2015</h3>
 
-		<p>
-			1. A. Perez-Rosado, R.D. Gelhar, S. Nolen, S.K. Gupta, and H.A. Bruck. Design, fabrication, and characterization of multifunctional wings to harvest solar energy in flapping wing air vehicles. Smart Materials and Structures, 24(6):065042, 2015.
-		</p>
-		<p>
-			2. Z. Kootbally, C. Schlenoff, C. Lawler, T. Kramer, and S.K. Gupta. Towards robust assembly with knowledge representation for the planning domain definition language (PDDL). Robotics and Computer-Integrated Manufacturing, 33:42-55, 2015.
-		</p>
-		<p>
-			3. E. Raboin, P. Svec, D. S. Nau, and S.K. Gupta. Model-predictive asset guarding by team of autonomous surface vehicles in environment with civilian boats. Autonomous Robots, 38(3):261-282, 2015.
-		</p>
-		<p>
-			4. L.J. Roberts, H.A. Bruck, and S.K. Gupta. Modeling of dive maneuvers in flapping wing unmanned aerial vehicles.  IEEE International Symposium on Safety, Security, and Rescue Robotics, West Lafayette, IN, October 2015. 
-		</p>
-		<p>
-			5. G. Mullins and S.K. Gupta. Adversarial blocking techniques for autonomous surface vehicles using model-predictive motion goal computation. IEEE/RSJ International Conference on Intelligent Robots and Systems, Hamburg, Germany, Sept 28-October 2, 2015.
-		</p>
-		<p>
-			6. K.N. Kaipa, S.S. Thevendria-Karthic, S. Shriyam, A.M. Kabir, J. D. Langsfeld, and S.K. Gupta. Resolving automated perception system failures in bin-picking tasks using assistance from remote human operators. IEEE International Conference on Automation Science and Engineering, Gothenburg, Sweden, August 24-28, 2015.
-		</p>
-		<p>
-			7. A. Holness, H.A. Bruck, and S.K. Gupta. Design of propeller-assisted flapping wing air vehicles for enhanced aerodynamic performance. ASME Mechanism and Robotics Conference, Boston, MA, August 2015.
-		</p>
-		<p>
-			8. J.W. Gerdes, H.A. Bruck, and S.K. Gupta. A systematic exploration of wing size on flapping wing air vehicle performance. ASME Mechanism and Robotics Conference, Boston, MA, August 2015.
-		</p>
-		<p>
-			9. A. Perez-Rosado, H.A. Bruck, and S.K. Gupta. Enhancing the design of solar-powered flapping wing air vehicles using multifunctional structural components. ASME Mechanism and Robotics Conference, Boston, MA, August 2015.
-		</p>
-		<p>
-			10. K. N. Kaipa, A. S. Kankanhalli-Nagendra, and S. K. Gupta. Toward estimating task execution confidence for robotic bin-picking applications. AAAI Fall Symposium: Self-Confidence in Autonomous Systems, Arlington, VA, November 2015.
-		</p>
-		<p>
-			11. K. N. Kaipa, S. Shriyam, N-B. Kumbla, and S. K. Gupta. Automated plan generation for robotic singulation from mixed bins. Workshop on Task Planning for Intelligent Robots in Service and Manufacturing, held at IEEE/RSJ International Conference on Intelligent Robots and Systems, Hamburg, Germany, October 2015.
-		</p>
-		<p>
-			12. K.N. Kaipa, N-B. Kumbla, and S. K. Gupta. Characterizing performance of sensorless fine positioning moves in the presence of initial position uncertainty. Workshop on Task Planning for Intelligent Robots in Service and Manufacturing, held at IEEE/RSJ International Conference on Intelligent Robots and Systems, Hamburg, Germany, October 2015.
-		</p>
-		<p>
-			13. J. D. Langsfeld, K. N. Kaipa, and S. K. Gupta. Generation and Exploitation of Local Models for Rapid Learning of a Pouring Task. Workshop on Machine Learning in Planning and Control of Robot Motion, held at IEEE/RSJ International Conference on Intelligent Robots and Systems, Hamburg, Germany, October 2015.
-		</p>
-		<p>
-			14. A. Perez-Rosado, S.K. Gupta, and H.A. Bruck. Mechanics of multifunctional wings with solar cells for robotic birds.  SEM Annual Conference and Exposition, Costa Mesa, CA, June 2015
-		</p>
-		<p>
-			15. A. G. Banerjee, A. Barnes, K.N. Kaipa, J, Liu, S. Shriyam, N. Shah, and S. K. Gupta. An Ontology to Enable Optimized Task Partitioning in Human-Robot Collaboration for Warehouse Kitting Operations. SPIE Sensing Technology + Applications Symposium, Sensors for Next-Generation Robotics II Conference, Baltimore, MD, 2015. 
+		<p>	
+			{{Publication._index + 1}}. {{ Publication.Authors }} {{ Publication.Name }}. <span style=" font-style: italic;"> {{ Publication.IEEE }} </span>, {{ Publication.Location }}, {{ Publication.Month }} {{ Publication.Year }}.
 		</p>
 
 </div>
