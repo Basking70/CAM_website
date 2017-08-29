@@ -1,11 +1,11 @@
-<div class="container gallery-container">
-    <div class="tz-gallery">
-        <div class="row">
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic1.jpg">
-                    <img src="images/gallery/pic1.jpg" alt="gallery">
+<div class="container gallery-container" >
+    <div class="tz-gallery" >
+        <div class="row" >
+            <div class="col-sm-6 col-md-4" ng-repeat="Gallery in GalleryData | orderBy : 'Id'">
+                <a class="lightbox" href="images/gallery/{{Gallery.PicUrl}}">
+                    <img ng-src="images/gallery/{{Gallery.PicUrl}}" alt="gallery">
                 </a>
-            </div>
+            </div><!--
             <div class="col-sm-6 col-md-4">
                 <a class="lightbox" href="images/gallery/pic2.jpg">
                     <img src="images/gallery/pic2.jpg" alt="gallery">
@@ -245,7 +245,7 @@
                 <a class="lightbox" href="images/gallery/pic51.jpg">
                     <img src="images/gallery/pic51.jpg" alt="gallery">
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
