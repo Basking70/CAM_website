@@ -65,10 +65,10 @@ angular
         controller: 'LoginCtrl',
         controllerAs: 'login'
       })
-      .when('/admin', {
-        templateUrl: 'views/admin.html',
-        controller: 'AdminCtrl',
-        controllerAs: 'admin'
+      .when('/vkjvkjk646jfdkjjdgvsldkjvbsjhv2423JSDGVSKJDVJSD7527235632MXHBVKDJVKSDJV', {
+        templateUrl: 'views/vkjvkjk646jfdkjjdgvsldkjvbsjhv2423JSDGVSKJDVJSD7527235632MXHBVKDJVKSDJV.html',
+        controller: 'vkjvkjk646jfdkjjdgvsldkjvbsjhv2423JSDGVSKJDVJSD7527235632MXHBVKDJVKSDJVCtrl',
+        controllerAs: 'vkjvkjk646jfdkjjdgvsldkjvbsjhv2423JSDGVSKJDVJSD7527235632MXHBVKDJVKSDJV'
       })
       .when('/user', {
         templateUrl: 'views/user.html',
