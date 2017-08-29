@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name camApp.controller:AdminCtrl
+ * @name camApp.controller:vkjvkjk646jfdkjjdgvsldkjvbsjhv2423JSDGVSKJDVJSD7527235632MXHBVKDJVKSDJVCtrl
  * @description
- * # AdminCtrl
+ * # vkjvkjk646jfdkjjdgvsldkjvbsjhv2423JSDGVSKJDVJSD7527235632MXHBVKDJVKSDJVCtrl
  * Controller of the camApp
  */
 angular.module('camApp')
-  .controller('AdminCtrl', function ($scope, $http, $timeout) {
+  .controller('vkjvkjk646jfdkjjdgvsldkjvbsjhv2423JSDGVSKJDVJSD7527235632MXHBVKDJVKSDJVCtrl', function ($scope, $http, $timeout) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -71,6 +71,8 @@ angular.module('camApp')
 					$scope.Research.Name="";
 					$scope.Research.People="";
 					$scope.Research.Content="";
+					$scope.Research.ReferenceShow="";
+					$scope.Research.Reference="";
 					$scope.Research.PicUrl="";
 
 				};
@@ -187,7 +189,7 @@ angular.module('camApp')
 						});
 
 						fd.append('formdata',JSON.stringify($scope.dataform));
-						$http.post('admin/managecuisineAdd',fd,{
+						$http.post('vkjvkjk646jfdkjjdgvsldkjvbsjhv2423JSDGVSKJDVJSD7527235632MXHBVKDJVKSDJV/managecuisineAdd',fd,{
 							transformRequest:angular.identity,
 							headers:{'Content-type':undefined}
 						}).success(function(data){
