@@ -156,7 +156,7 @@ angular.module('camApp')
 			// save the edit and send the changes to server
 			$scope.update = function(){
 				console.log($scope.Research._id);// this put put the research id to the console 
-
+				console.log($scope.Research.ReferenceShow);
 
 						$http({
 							method : 'PUT',

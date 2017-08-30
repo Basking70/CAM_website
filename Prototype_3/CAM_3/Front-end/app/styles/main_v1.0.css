@@ -319,3 +319,9 @@ div.tab2 button.active {
     height: auto;
 	border-radius: 15px;
 }
+
+/* input forms in admin page */
+textarea
+{
+	resize:none;
+}

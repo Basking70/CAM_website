@@ -1,254 +1,40 @@
 <div class="container gallery-container" >
-    <div class="tz-gallery" >
-        <div class="row" >
-            <div class="col-sm-6 col-md-4" ng-repeat="Gallery in GalleryData | orderBy : 'Id'">
-                <a class="lightbox" href="images/gallery/{{Gallery.PicUrl}}">
-                    <img ng-src="images/gallery/{{Gallery.PicUrl}}" alt="gallery">
-                </a>
-            </div><!--
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic2.jpg">
-                    <img src="images/gallery/pic2.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic3.jpg">
-                    <img src="images/gallery/pic3.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic4.jpg">
-                    <img src="images/gallery/pic4.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic5.jpg">
-                    <img src="images/gallery/pic5.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic6.jpg">
-                    <img src="images/gallery/pic6.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic7.jpg">
-                    <img src="images/gallery/pic7.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic8.jpg">
-                    <img src="images/gallery/pic8.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic9.jpg">
-                    <img src="images/gallery/pic9.jpg" alt="gallery">
-                </a>
-            </div>
-			<div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic10.jpg">
-                    <img src="images/gallery/pic10.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic11.jpg">
-                    <img src="images/gallery/pic11.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic12.jpg">
-                    <img src="images/gallery/pic12.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic13.jpg">
-                    <img src="images/gallery/pic13.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic14.jpg">
-                    <img src="images/gallery/pic14.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic15.jpg">
-                    <img src="images/gallery/pic15.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic16.jpg">
-                    <img src="images/gallery/pic16.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic17.jpg">
-                    <img src="images/gallery/pic17.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic18.jpg">
-                    <img src="images/gallery/pic18.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic19.jpg">
-                    <img src="images/gallery/pic19.jpg" alt="gallery">
-                </a>
-            </div>
-			<div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic20.jpg">
-                    <img src="images/gallery/pic20.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic21.jpg">
-                    <img src="images/gallery/pic21.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic22.jpg">
-                    <img src="images/gallery/pic22.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic24.jpg">
-                    <img src="images/gallery/pic24.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic25.jpg">
-                    <img src="images/gallery/pic25.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic26.jpg">
-                    <img src="images/gallery/pic26.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic27.jpg">
-                    <img src="images/gallery/pic27.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic28.jpg">
-                    <img src="images/gallery/pic28.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic29.jpg">
-                    <img src="images/gallery/pic29.jpg" alt="gallery">
-                </a>
-            </div>
-			<div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic30.jpg">
-                    <img src="images/gallery/pic30.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic31.jpg">
-                    <img src="images/gallery/pic31.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic34.jpg">
-                    <img src="images/gallery/pic34.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic35.jpg">
-                    <img src="images/gallery/pic35.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic36.jpg">
-                    <img src="images/gallery/pic36.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic37.jpg">
-                    <img src="images/gallery/pic37.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic38.jpg">
-                    <img src="images/gallery/pic38.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic39.jpg">
-                    <img src="images/gallery/pic39.jpg" alt="gallery">
-                </a>
-            </div>
-			<div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic40.jpg">
-                    <img src="images/gallery/pic40.jpg" alt="gallery">
-                </a>
-            </div>
-			<div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic41.jpg">
-                    <img src="images/gallery/pic41.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic42.jpg">
-                    <img src="images/gallery/pic42.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic44.jpg">
-                    <img src="images/gallery/pic44.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic45.jpg">
-                    <img src="images/gallery/pic45.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic46.jpg">
-                    <img src="images/gallery/pic46.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic47.jpg">
-                    <img src="images/gallery/pic47.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic47.jpg">
-                    <img src="images/gallery/pic47.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic47.jpg">
-                    <img src="images/gallery/pic47.jpg" alt="gallery">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic48.jpg">
-                    <img src="images/gallery/pic48.jpg" alt="gallery">
-                </a>
-            </div>
-			<div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic49.jpg">
-                    <img src="images/gallery/pic49.jpg" alt="gallery">
-                </a>
-            </div>
-			<div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic50.jpg">
-                    <img src="images/gallery/pic50.jpg" alt="gallery">
-                </a>
-            </div>
-			<div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="images/gallery/pic51.jpg">
-                    <img src="images/gallery/pic51.jpg" alt="gallery">
-                </a>
-            </div> -->
-        </div>
-    </div>
-</div>
+		<div class="tz-gallery">
+			<div class="row">	
+				<!--------------->	
+					<div class="col-sm-6 col-md-4" ng-repeat="Gallery in GalleryData | orderBy : 'Id'">
+						<div id="General_hover">
+							<a class="lightbox">
+								<img ng-src="images/gallery/{{Gallery.PicUrl}}" class="img-responsive" id="myBtn{{ Gallery.Id}}">
+							</a>
+						</div>
+						<!-- Modal for person -->
+						<div class="modal fade" id="myModal{{ Gallery.Id }}" role="dialog">
+							<div class="modal-dialog">
+								<!-- Modal content for person-->			 
+									<div class="modal-body">
+										<a target="_blank" href="images/gallery/{{Gallery.PicUrl}}">
+											<img ng-src="images/gallery/{{Gallery.PicUrl}}" style="max-width: 100%; height: auto; width: auto\9;" >
+										</a>
+									</div>	
+								<!-- closing btn-->
+									  <button type="button" class="btn btn-danger" data-dismiss="modal" style="float: right;">Close</button>
+							</div>
+						</div>
+						
+					</div>
+				<!--------------->
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
 
 
 
